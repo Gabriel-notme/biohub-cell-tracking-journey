@@ -59,7 +59,9 @@ From resampling labelled movies at leaderboard scale:
 | Public (~58 movies) | ≈ 0.017 | 0.0004–0.0011 |
 | Private (~141 movies) | ≈ 0.011 | 0.0003–0.0006 |
 
-This model excludes the systematic effect of new embryos, which turned out to be the dominant term. Changes that add
+The movie counts are my assumption from the data page (hidden set about the size of the training set). Probing by the
+3rd-place team later put them at about 60 public and 106 private movies, and each part at a single embryo. This model
+excludes the systematic effect of new embryos, which turned out to be the dominant term. Changes that add
 divisions are about 3.8× noisier on the public leaderboard than edge-only changes.
 
 ## 4. The strict gate (S1–S7), from P16 onwards
@@ -165,7 +167,19 @@ Before every submission:
 ## 9. Where the protocol failed
 
 The protocol was good at rejecting learned deletions and division *replacements*: the DivNet variants it warned about were
-the worst P-series submissions on private (0.932–0.933). It failed on division *recall*:
+the worst P-series submissions on private (0.932–0.933).
+
+**It could not see the largest error at all.** The public detector was trained on all 199 movies, so no group measured
+detection on unseen data. The public notebook I built on dropped from 0.947 to 0.916 between public and private before I
+changed anything. The 2nd- to 5th-place teams trained their own detectors, with fold copies they could validate, and the
+4th-place team also checked detector changes across embryos ([`PUBLIC_VS_PRIVATE.md`](PUBLIC_VS_PRIVATE.md) §4). A
+protocol that measures only the downstream stages cannot warn that the foundation will not transfer.
+
+**It could not see the public/private split either.** Probing by the 3rd-place team indicates that the public part is one
+dense embryo and the private part a much sparser one. My noise model (section 3) resampled movies, so it could not
+represent a public part drawn from one embryo and a private part drawn from another.
+
+It also failed on division *recall*:
 
 - **Local data under-rates extra divisions.**
   - The start-threshold band [0.80, 0.85) was rejected locally (0 TP / 5 FP on evaluable forks), yet P23C, which used it,

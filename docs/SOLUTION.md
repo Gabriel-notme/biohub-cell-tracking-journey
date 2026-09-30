@@ -2,11 +2,11 @@
 
 This is the full story of my entry for the Kaggle code competition
 [Biohub – Cell Tracking During Development](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development)
-(June 29 – September 29, 2026, 3,995 teams). I competed as team **Gabriel**.
+(June 29 – September 29, 2026, about 4,000 teams). I competed as team **Gabriel**.
 
 | | Public LB (≈29 % of hidden test) | Private LB (≈71 %) |
 |---|---:|---:|
-| Final selection (P21 + P20) | **0.976** (#2 at the deadline) | **0.937** (rank **36 / 3,995**) |
+| Final selection (P21 + P20) | **0.976** (#2 at the deadline) | **0.937** (rank **36** of about 4,000) |
 | Best public score among my submissions (P21 / P22B / P23D) | 0.976 | 0.937 |
 | Best private score among my submissions (P3 / P5 / P7) | 0.972 | **0.939** (not selected) |
 | Frozen lineage base (B5) | 0.965 | 0.928 |
@@ -16,9 +16,24 @@ The short version: I rebuilt a public 0.947 baseline into a learned lineage pipe
 It took the public score from 0.965 to 0.976. On the private leaderboard, my two selected versions were worth +0.008 / +0.009
 (P20 / P21) over B5, and the best versions +0.011 (P3 / P5 / P7).
 
-Even so, I dropped 34 places in the shake-up. The largest private gain I gave up, *dropped-sister recovery* (DSR, +0.004
-private), was a component I had **removed because the public leaderboard said it hurt**, even though my own local validation
-said it helped. [`PUBLIC_VS_PRIVATE.md`](PUBLIC_VS_PRIVATE.md) contains the full post-mortem.
+Even so, I dropped 34 places in the shake-up. There were three causes; the first two overlap and I cannot size them
+separately, but the last one is the smallest:
+
+- **The foundation.** The public detector I built on was trained on all 199 labelled movies, so I could never validate
+  detection, and I froze it. The public notebook itself went from 0.947 public to 0.916 private. The prize-place write-ups
+  I read (2nd–5th) all describe their own detectors, with fold copies they could validate.
+- **A public leaderboard from a different embryo.** Probing by the 3rd-place team indicates that the public part is one
+  dense embryo and the private part a much sparser one. My late public-guided choices were in effect tuned on the dense one.
+- **The final selection.** The largest private gain I gave up, *dropped-sister recovery* (DSR, +0.004 private on its two
+  measured pairs), was a component I had **removed because the public leaderboard said it hurt**, even though my own local
+  validation said it helped. Choosing P21 + P20 instead of a pair with P7 cost about 0.002 private (0.939 vs 0.937), about
+  a dozen places.
+
+Even my best submission (0.939) was below the gold zone (about 0.941). The 12th-place team reached 0.946 with the same
+public detector weights, tuned but not retrained, and the 18th-place team 0.941 with the public detection left as it was.
+Better work on top of the same detector could have reached gold without training a new one.
+
+[`PUBLIC_VS_PRIVATE.md`](PUBLIC_VS_PRIVATE.md) contains the full post-mortem.
 
 ---
 
@@ -55,7 +70,8 @@ Three properties of this setup drove almost every decision I made:
    leaderboard, one correct division is worth about **+0.0016** and one false division about **−0.0007**, more than most
    edge-level improvements.
 3. **The hidden test set is embryo-disjoint.** The data page states that train and test share no embryo, and that the hidden
-   set is roughly the size of the training set: about 199 movies, so about 58 public and 141 private. All my labelled data
+   set is roughly the size of the training set: about 199 movies, so about 58 public and 141 private. (After the deadline,
+   probing by the 3rd-place team put it at about 60 public and 106 private movies, each part from a single embryo.) All my labelled data
    came from just **two embryos**, `44b6` (71 movies) and `6bba` (128 movies). Every local number I computed is therefore a
    *same-embryo* estimate of a *new-embryo* score.
 
@@ -118,9 +134,10 @@ that followed. Its artefact bundle also contains b1, whose **fork head** became 
 
 ### 2.3 P-series: a correction stage on top of the frozen base (0.965 → 0.976)
 
-Retraining image models could not be validated fairly: the public detector had been trained on all 199 movies, and every
-movie comes from one of only two embryos. So I switched strategy: **keep B5 frozen and repair its output graph** with signals
-that B5 computes but throws away.
+At the time I concluded that retraining image models could not be validated fairly: the public detector had been trained on
+all 199 movies, and every movie comes from one of only two embryos. (In hindsight, the answer was to retrain the detector
+itself per fold, so that it *could* be validated; see §7.) So I switched strategy: **keep B5 frozen and repair its output
+graph** with signals that B5 computes but throws away.
 
 The first signal is the saved **pre-ILP candidate graph** (`fullgraphs/*.geff`). It holds every detection and candidate
 edge with its probability, including the many that the ILP dropped. The second is the **b1 fork head**, which scores any
@@ -251,6 +268,23 @@ costliest decision I let the public leaderboard make was removing DSR after P3, 
 public submission (P21) plus its division-neutral parent (P20) as a hedge. P7, at 0.939 private, was sitting unselected in my
 list.
 
+**The rest of the field puts that in proportion.**
+
+- P7 would have tied for about 22nd–26th, still below the gold zone (about 0.941, rank 18) and far from the prize places
+  (0.952 for 7th).
+- The public notebook I built on scored 0.947 public and 0.916 private.
+- The public and private parts appear to be two different embryos, a dense one and a much sparser one (from the 3rd-place
+  team's probing). Most teams near me dropped by 0.02–0.04; my 0.039 was the largest drop in the private top 49.
+- The prize-place write-ups I read (2nd–5th) describe their own detectors, with fold copies they could validate, plus
+  cross-embryo checks (4th) or external pretraining (5th). The top two teams matched or beat their public score; the
+  winner, whose write-up was not yet posted, scored 0.977 private against 0.976 public.
+- Teams that kept public detection, as I did, finished at 0.941 (18th) and 0.946 (12th, inside the gold zone).
+
+So my private drop was mostly not about my selection. It came from a foundation I could not validate and a public
+leaderboard drawn from a different embryo. The 12th- and 18th-place results show that better work on the same public
+detector, tuning it and repairing its output, could still have reached gold. [`PUBLIC_VS_PRIVATE.md`](PUBLIC_VS_PRIVATE.md)
+§4 has the numbers and links to those write-ups.
+
 ## 6. What did not work
 
 I tested more than a hundred ideas. None of them held up under local validation, the strict gate or the leaderboard. The
@@ -278,17 +312,24 @@ full log is in [`EXPERIMENT_LOG.md`](EXPERIMENT_LOG.md). Highlights:
 
 ## 7. What I would do differently
 
-1. **Select one model per hypothesis.** I took the best public model (P21) plus its division-neutral parent (P20) as a
+1. **Put the effort upstream sooner. This is the big one.** I could not validate the public detector, so I froze it and
+   worked around it. The better answer would have been to train my own detector per fold or per embryo, so that it *could*
+   be validated.
+   - By P13 the oracle bounds already showed that post-processing on the frozen detector could not add +0.01 (§6). That
+     was the point to switch.
+   - The leaderboard supports this: the 2nd- to 5th-place write-ups describe their own detectors with fold copies they
+     could validate, plus cross-embryo validation, external pretraining, ensembles or test-time augmentation, and all four
+     finished at 0.954 or above on private.
+   - That needed days of GPU time, which I spent instead on post-processing rules worth ±0.0003.
+2. **Select one model per hypothesis.** I took the best public model (P21) plus its division-neutral parent (P20) as a
    hedge. They differ by about one added fork per movie, so the hedge carried almost no independent information. Pairing the
    best *locally* validated division-aggressive model (P7) with P21 would have scored 0.939.
-2. **Treat the public leaderboard as a small, noisy test set.** If the new embryos resemble the training ones, the public
-   part holds only about 40 annotated divisions, so a 0.002 public swing is one or two division events. A local improvement
-   that holds on *both* embryos and on clean40 should not be overturned by a single public reading. At the time I reasoned
-   that dropping a component because of the public leaderboard was the "conservative" direction. It was not: it removed a
-   +0.004 private component.
-3. **Put the effort upstream sooner.** The P-stage oracle bounds were visible by P13. A detector or division model trained
-   for cross-embryo robustness was probably the only way past about 0.94 private. That needed days of GPU time, which I spent
-   instead on post-processing rules worth ±0.0003.
+3. **Treat the public leaderboard as a small, noisy test set, and check what it contains.** If the new embryos resemble the
+   training ones, the public part holds only about 40 annotated divisions, so a 0.002 public swing is one or two division
+   events. It also appears to be a single, dense embryo, unlike the private one. A local improvement that holds on *both*
+   embryos and on clean40 should not be overturned by a single public reading. At the time I reasoned that dropping a
+   component because of the public leaderboard was the "conservative" direction. It was not: it removed a +0.004 private
+   component.
 4. **Model division recall per embryo.** The b1 fork head may have been *under-confident* on the unseen embryos: start-type
    completion transferred at full strength, and lower thresholds did not hurt on private. A calibration step per embryo, such
    as matching the fork-score distribution of each new movie, might have captured this without guessing thresholds.

@@ -164,8 +164,8 @@ START at `t+2`.
 | Public | **−0.002** (P4 0.974 → P3 0.972), **−0.003** (P6 0.975 → P5 0.972) |
 | Private | **+0.004** (P4 0.935 → P3 0.939; P6 0.935 → P5 0.939) |
 
-I removed DSR after P7 because of the public signal. That was the costliest decision of the competition; see
-[`PUBLIC_VS_PRIVATE.md`](PUBLIC_VS_PRIVATE.md).
+I removed DSR after P7 because of the public signal. It was the costliest decision I let the public leaderboard make,
+although my larger limits were upstream; see [`PUBLIC_VS_PRIVATE.md`](PUBLIC_VS_PRIVATE.md) §4.
 
 ### 4.3 Double-fork resolution (`dfork.py`)
 

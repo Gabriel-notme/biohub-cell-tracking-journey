@@ -2,7 +2,7 @@
 
 > **Solution, code and post-mortem of my entry to Kaggle's
 > [Biohub – Cell Tracking During Development](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development)
-> (2026, 3,995 teams, team "Gabriel").**
+> (2026, about 4,000 teams, team "Gabriel").**
 
 [Full solution](docs/SOLUTION.md) · [Pipeline reference](docs/PIPELINE.md) · [Validation](docs/VALIDATION.md) ·
 [Public vs private post-mortem](docs/PUBLIC_VS_PRIVATE.md) · [What failed](docs/EXPERIMENT_LOG.md) ·
@@ -19,7 +19,7 @@ on top of B5.
 | | Public LB | Private LB |
 |---|---:|---:|
 | Frozen lineage base (my B5) | 0.965 | 0.928 |
-| **Final selection** (P21 + P20) | **0.976**, #2 at the deadline | **0.937**, rank **#36 / 3,995** |
+| **Final selection** (P21 + P20) | **0.976**, #2 at the deadline | **0.937**, rank **#36** of about 4,000 |
 | Best private submission (P3 / P5 / P7, not selected) | 0.972 | **0.939** |
 
 ## What I built
@@ -65,8 +65,25 @@ structurally checked and falls back per step or per movie.
 
 ## The lesson: public #2 → private #36
 
-Kaggle scores every code submission on the full hidden set. I recorded both scores for 28 submissions, and many pairs
-differ by exactly one component, which turns the leaderboard into a controlled experiment. What those pairs show:
+**The final pick was the smallest of my problems.**
+
+- **A detector I could not validate.** The public notebook I built on already dropped from 0.947 public to 0.916 private.
+  Its detector was trained on all 199 labelled movies, so I could not validate detection locally; I froze it and repaired
+  its output instead. The prize-place write-ups I read (2nd–5th) all describe their own detectors, with fold copies they
+  could validate. Still, the 12th-place team reached 0.946, inside the gold zone, with the same detector weights (tuned,
+  not retrained), so the detector limited my result but did not decide it on its own.
+- **A public leaderboard from a different embryo.** The public and private parts of the test set came from two different
+  embryos, a dense one and a much sparser one (inferred by the 3rd-place team). My late public-guided choices were in
+  effect tuned on the dense one.
+- **A bigger drop than the leaders.** The top two teams matched or beat their public score (the winner: 0.976 → 0.977),
+  and 3rd–7th place dropped by 0.007–0.019, against 0.039 for me.
+- **The selection.** Even my best private submission (0.939) sits below the gold zone (about 0.941) and well below the
+  prize places (0.952 for 7th). A better selection would have gained about a dozen places, not a better medal: both ranks
+  are silver.
+
+Within those limits, my own submissions still say a lot. Kaggle scores every code submission on the full hidden set. I
+recorded both scores for 28 submissions, and many pairs differ by exactly one component, which turns the leaderboard into a
+controlled experiment. What those pairs show:
 
 - **Division recall carried most of the private gain.** Start-type division completion was visible on both leaderboards
   (+0.005 public, +0.007 private). Dropped-sister recovery was −0.002 / −0.003 public but **+0.004** private, measured on two
@@ -79,7 +96,8 @@ differ by exactly one component, which turns the leaderboard into a controlled e
 - **My hedge protected against the wrong risk.** I took the best public model (P21) plus its division-neutral parent (P20)
   as a hedge. They were near-duplicates, so the hedge added little. P7, with 0.939 private, was never selected.
 
-The details, and what I would do differently, are in [docs/PUBLIC_VS_PRIVATE.md](docs/PUBLIC_VS_PRIVATE.md).
+The details, the comparison with the rest of the field and what I would do differently are in
+[docs/PUBLIC_VS_PRIVATE.md](docs/PUBLIC_VS_PRIVATE.md).
 
 ## Repository layout
 

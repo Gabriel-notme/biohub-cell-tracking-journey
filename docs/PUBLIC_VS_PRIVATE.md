@@ -1,12 +1,16 @@
 # Post-mortem: public #2 → private #36
 
 At the deadline my best public score was **0.976**, second on the public leaderboard; the leader had 0.978. On the private
-leaderboard my selected pair (P21 + P20) scored **0.937**, rank **36 of 3,995**, a drop of 34 places. Three of my
+leaderboard my selected pair (P21 + P20) scored **0.937**, rank **36 of about 4,000**, a drop of 34 places. Three of my
 *unselected* submissions scored **0.939**.
 
 Kaggle scores every code submission on the whole hidden test set. I recorded both the public and the private score for 28
-submissions, and many of them differ from another submission by exactly one component. This page uses those pairs as a
+submissions, and many of them differ from another submission by exactly one component. Sections 1–3 use those pairs as a
 controlled experiment.
+
+Section 4 compares my result with the rest of the field. That comparison shows the final selection cost me only about a
+dozen places. The larger limits were ones that sections 1–3 cannot measure: a detector I could not validate, and a public
+leaderboard drawn from a different embryo than the private one.
 
 All leaderboard numbers are rounded to 3 decimals. A delta of 0.000 means |Δ| < 0.001, and ±0.001 deltas are at the
 resolution limit. The complete table is in [`results/submissions.csv`](../results/submissions.csv).
@@ -24,8 +28,10 @@ resolution limit. The complete table is in [`results/submissions.csv`](../result
 "Local clean40" is my held-out score on 40 movies (36 held-out + the 4 preview movies); see
 [`VALIDATION.md`](VALIDATION.md).
 
-The absolute private level (~0.93–0.94 for everyone around me) is much lower than public (~0.97): the private embryos appear
-to be harder. What matters here is the *ordering*:
+The absolute private level (~0.93–0.94 for everyone around me) is much lower than public (~0.97). At first I read this as
+"the private embryos are harder". That is only part of the story. The private embryo does differ from the public one, and
+most teams near me dropped by 0.02–0.04. But the winner scored 0.977 on private, slightly *higher* than on public, and my
+drop was the largest in the private top 49 (section 4). Within my own submissions, what matters is the *ordering*:
 
 | Rank correlation (Spearman) | Local clean40 vs private | Public vs private |
 |---|---:|---:|
@@ -120,13 +126,124 @@ local, public and private agreed, as they did for start-type completion and doub
 
 ### 3.4 What a different selection would have scored
 
-| Selection | Private (best of the two) |
-|---|---:|
-| P21 + P20 (what I chose: best public + its division-neutral parent as a hedge) | 0.937 |
-| P7 + P21 (one per hypothesis: best local division model + best public model) | **0.939** |
-| P23C + P21 (both division-recall bets) | 0.938 |
+| Selection | Private (best of the two) | Private rank |
+|---|---:|---:|
+| P21 + P20 (what I chose: best public + its division-neutral parent as a hedge) | 0.937 | 36 |
+| P7 + P21 (one per hypothesis: best local division model + best public model) | **0.939** | about 22–26 |
+| P23C + P21 (both division-recall bets) | 0.938 | about 26–33 |
 
-## 4. Why I made the wrong call at the time
+The rank ranges come from ties: four other teams show 0.939 and seven show 0.938, and I cannot see the unrounded order.
+
+## 4. How the rest of the field fared
+
+The private leaderboard is still marked preliminary, so these ranks may shift slightly. "Public" is each team's best
+public score, which is not necessarily the submission it selected.
+
+| Private rank | Team | Public rank | Public | Private | Change |
+|---:|---|---:|---:|---:|---:|
+| 1 | Sergio Alvarez | 3 | 0.976 | 0.977 | +0.001 |
+| 2 | Soheil Ayati | 28 | 0.968 | 0.970 | +0.002 |
+| 3 | yu4u | 1 | 0.978 | 0.967 | −0.011 |
+| 4 | Barry | 20 | 0.969 | 0.962 | −0.007 |
+| 5 | Tang | 8 | 0.971 | 0.954 | −0.017 |
+| 6 | Cyrus | 94 | 0.962 | 0.953 | −0.009 |
+| 7 | tatsutaka | 7 | 0.971 | 0.952 | −0.019 |
+| 12 | Corwin | 14 | 0.970 | 0.946 | −0.024 |
+| 18 | ymg_aq | 9 | 0.971 | 0.941 | −0.030 |
+| **36** | **Gabriel (me)** | **2** | **0.976** | **0.937** | **−0.039** |
+
+- **Prize and medal lines.** Seven places were paid, and 7th place scored 0.952. The competition page lists 4,017 teams, so
+  Kaggle's medal formula ends the gold zone at about rank 18, which scored 0.941. Rank 36 is in the silver range.
+- **A better selection would not have changed the medal.** My best submission (0.939) would have tied for about 22nd–26th,
+  still silver. The selection mistakes in section 5 cost about a dozen places.
+- **Most of the field dropped, and my drop was the largest near the top.** Among the private top 49:
+  - the top two gained +0.001 and +0.002, and 3rd place dropped 0.011;
+  - ranks 4–11 dropped by 0.002–0.019;
+  - most other teams in ranks 12–49 dropped by 0.020–0.036;
+  - my −0.039 was the largest of the 49.
+- **The public and private parts were different embryos.** The 3rd-place team inferred by probing that the public part
+  (about 60 movies) and the private part (about 106 movies) each come from one new embryo. By their density measure the
+  public embryo is dense, while the private one is much sparser. The public leaderboard therefore measured a different kind
+  of data from the private one, not just a smaller sample of it. Their probed counts (about 166 hidden movies) are also
+  lower than the ~199 movies (58 public + 141 private) I assumed from the data page in [`SOLUTION.md`](SOLUTION.md) §1
+  and in the noise model of [`VALIDATION.md`](VALIDATION.md) §3.
+- **Most of my drop was there from day one.** The public notebook I built on scored 0.947 public and 0.916 private, a drop
+  of 0.031. Eight teams with a public score of 0.962–0.963 finished at 0.938–0.939 private, level with my best
+  submissions; my public lead over them did not survive.
+
+My own work was real on private: from 0.916 for the base notebook to 0.939 for P7. But after P7, the extra +0.004 public
+that P21 gained came with −0.002 private.
+
+### 4.1 What the published write-ups say
+
+These summaries come from the write-ups posted after the deadline. The winner's write-up had not been posted when I wrote
+this.
+
+**Teams that trained their own detectors:**
+
+- **2nd place** ([write-up](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/writeups/2nd-place-solution),
+  0.968 public / 0.970 private):
+  - trained its own temporal 3D U-Net detectors, five folds per model;
+  - excluded regions that are neither annotated nor clearly background from the loss, so that missing annotations do not
+    become negative examples;
+  - added synthetic faint cells as augmentation.
+- **3rd place** ([write-up](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/writeups/3rd-place-solution),
+  0.977 / 0.967 for its selected submission, best public 0.978): ensembles of its own five-fold 2.5D and 3D detectors. It still dropped about 0.01, and its probing is the
+  source of the embryo split above.
+- **4th place** ([write-up](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/writeups/4th-place-solution),
+  0.969 / 0.962):
+  - trained its own detector, with fold copies for validation, and checked detector changes across embryos;
+  - deliberately left out the public heatmap detector, because its weights had seen all 199 training movies and could not
+    be cross-validated;
+  - reports that private stayed close to public across all of its submissions.
+- **5th place** ([write-up](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/writeups/5th-place-3d-u-net-transformer-linker-multi-s),
+  0.971 / 0.954):
+  - trained its own five-fold detector and linker, pretrained on public ZebraHub data;
+  - credits the external pretraining with +0.016 private, the fold ensemble with +0.007 and test-time augmentation with
+    +0.005.
+- **16th place** ([write-up](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/writeups/16th-place-solution),
+  0.963 / 0.943): self-trained 3D U-Net detectors on top of the public tracking stack, and reports that its larger private
+  gains came from detector changes.
+
+**Teams that kept the public detection, as I did:**
+
+- **12th place** ([write-up](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/writeups/12th-place-solution),
+  0.970 / 0.946), the route closest to mine:
+  - tuned, but did not retrain, the same public detector weights, on a different public chain from mine;
+  - built its own measured, fail-safe repair stages, including one that gives a single-child mother its second daughter;
+  - reports that its in-sample bench over-read private by about 0.03, and that the stages it added after its base champion
+    were worth about twice as much on private as on public (+0.013 vs +0.006), while its earlier consolidation stages
+    gained less on private.
+- **18th place** ([write-up](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/writeups/18th-place-solution-lineage-graph-refinement),
+  0.971 / 0.941):
+  - kept a public notebook's detection and candidate graph, and rebuilt the division decisions downstream;
+  - their private score levelled off at about 0.942 from 20 September, while their public score kept rising to 0.971.
+
+### 4.2 What this means for my result
+
+- **The detector I could not validate limited everything downstream.** It was trained on all 199 movies, so none of my
+  validation groups was clean for detection ([`VALIDATION.md`](VALIDATION.md) §2). I responded by freezing it and
+  repairing its output. The prize-place write-ups I read (2nd–5th) all describe their own detectors, with fold copies they
+  could validate.
+- **The public detector did not decide the medal by itself.** The public-detection pipelines I can check finished at
+  0.937 (me; 0.939 for my best, unselected submission), 0.941 (18th) and 0.946 (12th, inside the gold zone). The
+  12th-place team reached 0.946 with the same detector weights, tuned but not retrained, on a different public chain plus
+  its own stages. That is about 0.007 above my best, a rough gap given about 0.003 of read noise on each score, but it
+  shows that more was possible from a comparable foundation. A self-trained detector was not enough on its own either:
+  the 16th-place team had one and finished at 0.943.
+- **My public tuning was aimed at the wrong embryo.** The public part is a single dense embryo and the private part a
+  sparser one, so my late public-guided choices (section 5) were in effect tuned on the dense one. That fits the pattern
+  after P7: +0.004 public, −0.002 private.
+- **The selection itself was the smallest problem.** Choosing P21 + P20 instead of a pair with P7 cost about 0.002 private
+  (0.939 vs 0.937), about a dozen places.
+- **Some of my local signals may have pointed the wrong way.** b1 was trained with hard negatives mined from the real
+  detector output. With labels this sparse, many of the hardest "negatives" may be real, unannotated divisions. The
+  4th-place team reports that hard-negative mining hurt their division models for exactly this reason. It would also
+  explain why the changes that add a new daughter (start-type completion, DSR, lower start thresholds) were positive or
+  neutral on private, while my local data called the low-score bands false positives. This is a hypothesis; I have not
+  tested it.
+
+## 5. Why I made the wrong call at the time
 
 - **I read DSR's public drop as a mechanism, not as noise.** The story was that "weak-evidence additions do not transfer to
   new embryos". It was plausible, and it matched the failures of node-level additions (junk-track pruning, fragment
@@ -143,14 +260,22 @@ local, public and private agreed, as they did for start-type completion and doub
   about one fork per movie, so the second pick carried almost no independent information. The real uncertainty was
   DSR-style recall versus none, and neither pick contained DSR.
 
-## 5. Takeaways I will reuse
+## 6. Takeaways I will reuse
 
-1. **Count the evaluable events behind a public delta.** If a public change can be explained by one or two division events,
+1. **Build the foundation from parts I can validate.** If a public model was trained on all the labelled data, retrain an
+   equivalent per fold or per group instead of freezing it and optimising around it. Put the effort into the main model,
+   external pretraining, fold ensembles and test-time augmentation before post-processing.
+2. **Find out what the public split actually is.** If the public part can come from a different group (here, a different
+   embryo) than the private part, public gains are gains on that group only.
+3. **Count the evaluable events behind a public delta.** If a public change can be explained by one or two division events,
    it is not evidence.
-2. **Keep the component that local held-out data supports on every split, unless the leaderboard evidence is large compared
+4. **Keep the component that local held-out data supports on every split, unless the leaderboard evidence is large compared
    with its event noise.**
-3. **Diversify the two final picks by hypothesis,** for example "aggressive divisions" vs "robust edges", not by score or by
+5. **Diversify the two final picks by hypothesis,** for example "aggressive divisions" vs "robust edges", not by score or by
    minimal diffs.
-4. **Be suspicious of transfer estimates built from a second training embryo.** Treat them as upper bounds.
-5. **Calibrate event detectors on the test distribution itself** (per-movie score quantiles, or self-consistency checks
+6. **Be suspicious of transfer estimates built from a second training embryo.** Treat them as upper bounds.
+7. **Calibrate event detectors on the test distribution itself** (per-movie score quantiles, or self-consistency checks
    between the two daughters) rather than trusting thresholds tuned on in-sample movies.
+8. **Compare with the field, not only with my own submissions.** I explained my absolute drop as "harder test data", but it
+   was much smaller for the leaders: the top two did not drop at all, and 3rd–7th place dropped 0.007–0.019, against my
+   0.039.

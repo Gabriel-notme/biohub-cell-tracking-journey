@@ -1,0 +1,2 @@
+# Keep every file byte-for-byte as committed (no end-of-line conversion), so deployed files keep their hashes.
+* -text

@@ -1,0 +1,28 @@
+{
+ "variant": "P6",
+ "models": [
+  "b1_best.pt"
+ ],
+ "event_config": {
+  "fork_ensemble": "first",
+  "edge_ensemble": "last"
+ },
+ "apply": {
+  "th_start": 0.9,
+  "th_stolen": 0.97,
+  "old_max": 1.0
+ },
+ "prune_min_len": 2,
+ "dfork": {
+  "K": 2
+ },
+ "relink": {
+  "th": 0.65,
+  "model": "relink_lgb.json"
+ },
+ "edge_link": {
+  "th": 0.4,
+  "gap2": true,
+  "model": "edge_lgb.json"
+ }
+}

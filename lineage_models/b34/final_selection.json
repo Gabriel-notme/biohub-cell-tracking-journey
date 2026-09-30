@@ -1,0 +1,150 @@
+{
+  "B3": {
+    "base": {
+      "model_files": [
+        "b1_best.pt",
+        "b2_pretrained_best.pt"
+      ],
+      "config": {
+        "edge_weight": 8,
+        "change_penalty": 0.3,
+        "edge_min_prob": 0.7,
+        "max_distance": 14,
+        "fork_threshold": 0.95,
+        "fork_veto_threshold": 0.5,
+        "edge_ensemble": "last",
+        "fork_ensemble": "first"
+      }
+    },
+    "stages": [
+      {
+        "kind": "fast_division_review",
+        "model_files": [
+          "visual_motion_best.pt",
+          "b1_best.pt",
+          "b2_pretrained_best.pt"
+        ],
+        "config": {
+          "mode": "fork_only",
+          "edge_weight": 0,
+          "fork_threshold": 1.1,
+          "fork_veto": 0.1,
+          "fork_change_penalty": 0.5
+        }
+      },
+      {
+        "kind": "motion",
+        "model_files": [
+          "motion_invariant_best.pt"
+        ],
+        "config": {
+          "edge_weight": 8,
+          "edge_change_penalty": 0.5,
+          "fork_threshold": 1.1,
+          "fork_veto": 0,
+          "protected_division_radius": 2
+        }
+      },
+      {
+        "kind": "verified_recovery",
+        "model_files": [
+          "b3_conditioned_step_9000.pt",
+          "transfer_v2_frozen.pt"
+        ],
+        "config": {
+          "heat_threshold": 0.6,
+          "fork_threshold": 0.98,
+          "edge_threshold": 0.995,
+          "verification_threshold": 0.5
+        }
+      },
+      {
+        "kind": "centroid",
+        "model_files": [
+          "centroid_v1_frozen.pt"
+        ],
+        "config": {
+          "centroid_blend": 0.5
+        }
+      }
+    ],
+    "calibration_frozen": true,
+    "reference_precision": "full_fp32_all_d4_batched2",
+    "calibration_report": "localized_motion_cal"
+  },
+  "B4": {
+    "base": {
+      "model_files": [
+        "b1_best.pt",
+        "b2_pretrained_best.pt"
+      ],
+      "config": {
+        "edge_weight": 8,
+        "change_penalty": 0.3,
+        "edge_min_prob": 0.7,
+        "max_distance": 14,
+        "fork_threshold": 0.95,
+        "fork_veto_threshold": 0.5,
+        "edge_ensemble": "last",
+        "fork_ensemble": "first"
+      }
+    },
+    "stages": [
+      {
+        "kind": "fast_division_review",
+        "model_files": [
+          "visual_motion_best.pt",
+          "b1_best.pt",
+          "b2_pretrained_best.pt"
+        ],
+        "config": {
+          "mode": "fork_only",
+          "edge_weight": 0,
+          "fork_threshold": 1.1,
+          "fork_veto": 0.1,
+          "fork_change_penalty": 0.5
+        }
+      },
+      {
+        "kind": "visual_edge",
+        "model_files": [
+          "visual_edge_best.pt",
+          "b1_best.pt",
+          "b2_pretrained_best.pt"
+        ],
+        "config": {
+          "edge_weight": 8,
+          "edge_change_penalty": 0.5,
+          "fork_threshold": 1.1,
+          "fork_veto": 0,
+          "protected_division_radius": 2
+        }
+      },
+      {
+        "kind": "verified_recovery",
+        "model_files": [
+          "b3_conditioned_step_9000.pt",
+          "transfer_v2_frozen.pt"
+        ],
+        "config": {
+          "heat_threshold": 0.6,
+          "fork_threshold": 0.98,
+          "edge_threshold": 0.995,
+          "verification_threshold": 0.5
+        }
+      },
+      {
+        "kind": "centroid",
+        "model_files": [
+          "centroid_v1_frozen.pt"
+        ],
+        "config": {
+          "centroid_blend": 0.5
+        }
+      }
+    ],
+    "calibration_frozen": true,
+    "reference_precision": "full_fp32_all_d4_batched2",
+    "calibration_report": "localized_visual_cal"
+  }
+}

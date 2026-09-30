@@ -1,0 +1,17 @@
+{
+  "B1": {
+    "models": [
+      "/workspace/biohub/B1/best.pt"
+    ],
+    "report_directory": "/workspace/biohub/evaluation/B1_fp16"
+  },
+  "B2": {
+    "models": [
+      "/workspace/biohub/B1/best.pt",
+      "/workspace/biohub/B2_pretrained/best.pt"
+    ],
+    "report_directory": "/workspace/biohub/evaluation/B2_specialist"
+  },
+  "selection_basis": "Highest complete-video calibration score among tested candidates; no audit score used by this selector. Calibration comparisons are exploratory, not proof of leaderboard performance.",
+  "frozen_utc": "2026-09-22T01:06:23.462372+00:00"
+}

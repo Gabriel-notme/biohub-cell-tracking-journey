@@ -1,0 +1,37 @@
+==================== V2H vs v1 (dnA)
+[v2 - v1] all-199 d -0.00049  Bonferroni 98.33% CI [-0.00487, +0.00375]  (95% CI [-0.00414, +0.00310])  P>0 0.396  div TP +0 FP +2
+   embryo 44b6 n=71 d -0.00233 P>0 0.254 div TP -1 FP -1
+   embryo 6bba n=128 d -0.00010 P>0 0.482 div TP +1 FP +3
+   set hold36  n= 36 d -0.00592 div TP -2 FP +1
+   set prev4   n=  4 d +0.00000 div TP +0 FP +0
+   set audit32 n= 32 d +0.00579 div TP +1 FP -1
+   set t127a   n= 64 d -0.00041 div TP +1 FP +4
+   set t127b   n= 63 d +0.00090 div TP +0 FP -2
+== STRICT V2H vs v1 vi=1 FAIL (failed: S1,S2,S3,S4,S5,S6,S7)
+  S1 XX   all -0.00049 CI [-0.00405, +0.00266]
+  S2 XX   44b6 -0.00233 P>0 0.205 | 6bba -0.00010 P>0 0.490
+  S3 XX   clean40 -0.00540 (44b6 -0.00614, 6bba -0.00521)
+  S4 XX   B5clean72 -0.00168 (44b6 -0.00461, 6bba -0.00024)
+  S5 XX   -hold36 +0.00107 -prev4 -0.00050 -audit32 -0.00131 -t127a -0.00043 -t127b -0.00124
+  S6 XX   drop top5 -0.00295 | 44b6 drop top3 -0.00371 | 6bba drop top3 -0.00233
+  S7 XX   up 28 down 44
+  S7b(info) movies with evaluable changes 31: score up 9 down 22 | edge-count net up 9 down 22
+==================== A/A: v1rr vs v1
+   A/A all-199 d +0.00000; movies changed 0
+==================== V2H vs v1rr
+[v2 - v1rr] all-199 d -0.00049  Bonferroni 98.33% CI [-0.00487, +0.00375]  (95% CI [-0.00414, +0.00310])  P>0 0.396  div TP +0 FP +2
+   embryo 44b6 n=71 d -0.00233 P>0 0.242 div TP -1 FP -1
+   embryo 6bba n=128 d -0.00010 P>0 0.485 div TP +1 FP +3
+   set hold36  n= 36 d -0.00592 div TP -2 FP +1
+   set prev4   n=  4 d +0.00000 div TP +0 FP +0
+   set audit32 n= 32 d +0.00579 div TP +1 FP -1
+   set t127a   n= 64 d -0.00041 div TP +1 FP +4
+   set t127b   n= 63 d +0.00090 div TP +0 FP -2
+==================== M5 candidate level (first-pass dc pool, top-k = P15 acceptance count)
+   44b6 start  | v1 top339 TP 1 FP 1 | v2 top339 TP 1 FP 0
+   44b6 stolen | v1 top428 TP 2 FP 2 | v2 top428 TP 2 FP 0
+   6bba start  | v1 top545 TP 5 FP 16 | v2 top545 TP 3 FP 12
+   6bba stolen | v1 top345 TP 1 FP 22 | v2 top345 TP 2 FP 23
+   44b6 net TP-0.4FP v1 1.8 v2 3.0
+   6bba net TP-0.4FP v1 -9.2 v2 -9.0
+DECISION V2H M1=False M2=False M3=False M4=False M5=True -> FAIL

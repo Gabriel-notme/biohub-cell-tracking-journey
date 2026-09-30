@@ -1,0 +1,15 @@
+movies 199
+P19       vs p15      | all +0.000276 | 44b6 +0.000573 | 6bba +0.000221 | clean40 +0.000175 | CI [+0.000146, +0.000434] | dTP +2 dFP -23 dFN -2 div +0/+0 nodes -4644
+seq_cd    vs p15      | all +0.000101 | 44b6 +0.000474 | 6bba +0.000032 | clean40 +0.000096 | CI [-0.000007, +0.000226] | dTP -1 dFP -14 dFN +1 div +0/+0 nodes -849
+seq_ff    vs seq_cd   | all +0.000081 | 44b6 +0.000026 | 6bba +0.000091 | clean40 +0.000021 | CI [+0.000027, +0.000177] | dTP +2 dFP -5 dFN -2 div +0/+0 nodes -1553
+seq_st    vs seq_ff   | all +0.000018 | 44b6 +0.000050 | 6bba +0.000012 | clean40 +0.000004 | CI [+0.000003, +0.000040] | dTP +0 dFP -2 dFN +0 div +0/+0 nodes -263
+seq_tt    vs seq_st   | all +0.000012 | 44b6 +0.000009 | 6bba +0.000013 | clean40 +0.000005 | CI [+0.000004, +0.000028] | dTP +0 dFP -1 dFN +0 div +0/+0 nodes -384
+seq_par   vs seq_tt   | all +0.000003 | 44b6 +0.000000 | 6bba +0.000004 | clean40 +0.000004 | CI [+0.000001, +0.000005] | dTP +0 dFP +0 dFN +0 div +0/+0 nodes -99
+seq_bd    vs seq_par  | all +0.000061 | 44b6 +0.000013 | 6bba +0.000070 | clean40 +0.000045 | CI [+0.000039, +0.000097] | dTP +1 dFP -1 dFN -1 div +0/+0 nodes -1496
+loo_cd    vs P19      | all -0.000154 | 44b6 -0.000483 | 6bba -0.000093 | clean40 -0.000054 | CI [-0.000303, -0.000045] | dTP -5 dFP +15 dFN +5 div +0/+0 nodes +849
+loo_ff    vs P19      | all -0.000081 | 44b6 -0.000026 | 6bba -0.000091 | clean40 -0.000021 | CI [-0.000177, -0.000027] | dTP -2 dFP +5 dFN +2 div +0/+0 nodes +1553
+loo_st    vs P19      | all -0.000018 | 44b6 -0.000050 | 6bba -0.000012 | clean40 -0.000004 | CI [-0.000040, -0.000003] | dTP +0 dFP +2 dFN +0 div +0/+0 nodes +263
+loo_tt    vs P19      | all -0.000012 | 44b6 -0.000009 | 6bba -0.000013 | clean40 -0.000005 | CI [-0.000028, -0.000004] | dTP +0 dFP +1 dFN +0 div +0/+0 nodes +384
+loo_par   vs P19      | all -0.000003 | 44b6 -0.000000 | 6bba -0.000004 | clean40 -0.000004 | CI [-0.000005, -0.000001] | dTP +0 dFP +0 dFN +0 div +0/+0 nodes +99
+loo_bd    vs P19      | all -0.000061 | 44b6 -0.000013 | 6bba -0.000070 | clean40 -0.000045 | CI [-0.000097, -0.000039] | dTP -1 dFP +1 dFN +1 div +0/+0 nodes +1496
+loo_dup   vs P19      | all -0.000033 | 44b6 -0.000060 | 6bba -0.000028 | clean40 -0.000013 | CI [-0.000061, -0.000012] | dTP +0 dFP +3 dFN +0 div +0/+0 nodes +746

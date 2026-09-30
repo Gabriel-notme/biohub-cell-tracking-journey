@@ -1,0 +1,4 @@
+argmax in the plausible neighbourhood on all 199: {'cd': 3.2, 'ff': 7, 'st': 2.5, 'tt': 4.0, 'par': 3.5, 'bm': 3.0, 'bl': 7} delta +0.000422 vs default +0.000276
+split halves (400): tuned T +0.000435 -> H +0.000331 (optimism +0.000104, P(H>0) 0.993) | default T +0.000273 H +0.000279 | P(tuned beats default on H) 0.838
+Efron bootstrap: apparent +0.000422, optimism +0.000045 (sd 0.000083) -> optimism-corrected +0.000376
+neighbourhood combos: 12288 | in-sample delta min -0.000093 median +0.000165 max +0.000422 | default percentile 88.6%

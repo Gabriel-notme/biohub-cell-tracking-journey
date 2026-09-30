@@ -1,0 +1,9 @@
+== STRICT v6 vi=6 FAIL (failed: S2,S6)
+  S1 ok   all +0.00052 CI [+0.00005, +0.00121]
+  S2 XX   44b6 +0.00150 P>0 1.000 | 6bba +0.00031 P>0 0.923
+  S3 ok   clean40 +0.00149 (44b6 +0.00123, 6bba +0.00149)
+  S4 ok   B5clean72 +0.00136 (44b6 +0.00202, 6bba +0.00104)
+  S5 ok   -hold36 +0.00011 -prev4 +0.00053 -audit32 +0.00050 -t127a +0.00075 -t127b +0.00073
+  S6 XX   drop top5 +0.00022 | 44b6 drop top3 +0.00118 | 6bba drop top3 -0.00001
+  S7 ok   up 147 down 3
+  S7b(info) movies with evaluable changes 15: score up 12 down 3 | edge-count net up 12 down 3

@@ -1,0 +1,30 @@
+{
+  "B1": {
+    "config": {
+      "name": "division_review_half",
+      "edge_weight": 0.0,
+      "fork_threshold": 0.95,
+      "fork_veto_threshold": 0.5
+    },
+    "model_files": [
+      "b1_model0.pt"
+    ]
+  },
+  "B2": {
+    "config": {
+      "name": "specialist_dominant",
+      "edge_weight": 8.0,
+      "change_penalty": 0.3,
+      "edge_min_prob": 0.7,
+      "max_distance": 14.0,
+      "fork_threshold": 0.95,
+      "fork_veto_threshold": 0.5,
+      "edge_ensemble": "last",
+      "fork_ensemble": "first"
+    },
+    "model_files": [
+      "b2_model0.pt",
+      "b2_model1.pt"
+    ]
+  }
+}

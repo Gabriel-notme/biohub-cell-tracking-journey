@@ -1,0 +1,94 @@
+movies 199
+sanity: p15 rows != stored vi0: 0 [] | p17file != stored vi1: 0 []
+sanity: P17 == deployed rules(P15): 199 / 199 | P17 subset P15: 199
+
+== P17 observed: all +0.00060 44b6 +0.00152 6bba +0.00040 clean40 +0.00151 | parts {'node': 5.2e-05, 'edge': 0.000124, 'div': 0.000423} {'edge_tp': -2, 'edge_fp': -20, 'edge_fn': 2, 'division_tp': 0, 'division_fp': -2, 'division_fn': 0, 'num_pred_nodes': -2939}
+
+== sequential rule increments (official metric, all 199):
+cutdup       all +0.00010 44b6 +0.00047 6bba +0.00003 clean40 +0.00010 | counts {'edge_tp': -1, 'edge_fp': -14, 'edge_fn': 1, 'division_tp': 0, 'division_fp': 0, 'division_fn': 0, 'num_pred_nodes': -849}
+forkfrag     all +0.00008 44b6 +0.00003 6bba +0.00009 clean40 +0.00002 | counts {'edge_tp': 2, 'edge_fp': -5, 'edge_fn': -2, 'division_tp': 0, 'division_fp': 0, 'division_fn': 0, 'num_pred_nodes': -1553}
+shortbranch  all +0.00042 44b6 +0.00102 6bba +0.00028 clean40 +0.00139 | counts {'edge_tp': -3, 'edge_fp': -1, 'edge_fn': 3, 'division_tp': 0, 'division_fp': -2, 'division_fn': 0, 'num_pred_nodes': -537}
+ffonly       all +0.00008 44b6 +0.00003 6bba +0.00009 clean40 +0.00002 {'node': 3.031303671874319e-05, 'edge': 5.0182861677572355e-05, 'div': 0.0} {'edge_tp': 2, 'edge_fp': -5, 'edge_fn': -2, 'division_tp': 0, 'division_fp': 0, 'division_fn': 0, 'num_pred_nodes': -1553}
+sbonly       all +0.00042 44b6 +0.00102 6bba +0.00028 clean40 +0.00139 {'node': 1.1231934960331813e-05, 'edge': -1.5931470103258683e-05, 'div': 0.0004229397468673568} {'edge_tp': -3, 'edge_fp': -1, 'edge_fn': 3, 'division_tp': 0, 'division_fp': -2, 'division_fn': 0, 'num_pred_nodes': -537}
+
+== placebo A (cd->random unselected gap chains, ff->random unselected small fork-free comps, sb->random linear track-end tails), K=20
+  all      obs +0.00060 | placebo mean -0.00003 sd 0.00007 min -0.00015 max +0.00010 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00063
+  44b6     obs +0.00152 | placebo mean -0.00008 sd 0.00031 min -0.00076 max +0.00038 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00160
+  6bba     obs +0.00040 | placebo mean -0.00002 sd 0.00007 min -0.00015 max +0.00012 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00042
+  clean40  obs +0.00151 | placebo mean -0.00013 sd 0.00016 min -0.00052 max +0.00005 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00164
+  part node placebo mean +0.000052 sd 0.000000 min +0.000052 max +0.000052
+  part edge placebo mean -0.000083 sd 0.000072 min -0.000202 max +0.000047
+  part div  placebo mean +0.000000 sd 0.000000 min +0.000000 max +0.000000
+  counts mean {'edge_tp': -13.2, 'edge_fp': -2.4, 'edge_fn': 13.2, 'division_tp': 0.0, 'division_fp': 0.0, 'division_fn': 0.0, 'num_pred_nodes': -2936.8}
+  counts per k: [(-9, 0, 0, 0, -2936), (-17, -3, 0, 0, -2937), (-13, -2, 0, 0, -2936), (-20, 1, 0, 0, -2938), (-11, -5, 0, 0, -2934), (-8, -1, 0, 0, -2938), (-22, 2, 0, 0, -2937), (-24, 3, 0, 0, -2939), (-8, -6, 0, 0, -2937), (-20, -2, 0, 0, -2938), (-5, 2, 0, 0, -2938), (-12, 5, 0, 0, -2934), (-19, 0, 0, 0, -2938), (-9, -8, 0, 0, -2937), (-10, 0, 0, 0, -2935), (-16, -9, 0, 0, -2938), (-5, -12, 0, 0, -2936), (-22, 4, 0, 0, -2938), (-11, -9, 0, 0, -2934), (-3, -8, 0, 0, -2938)]
+
+== placebo B (same cd/ff placebo, sb->cut first L nodes of a daughter branch at a random unselected fork), K=20
+  all      obs +0.00060 | placebo mean -0.00230 sd 0.00094 min -0.00402 max -0.00098 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00290
+  44b6     obs +0.00152 | placebo mean -0.00316 sd 0.00229 min -0.00646 max +0.00051 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00468
+  6bba     obs +0.00040 | placebo mean -0.00210 sd 0.00090 min -0.00424 max -0.00072 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00250
+  clean40  obs +0.00151 | placebo mean -0.00207 sd 0.00184 min -0.00572 max +0.00009 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00358
+  part node placebo mean +0.000052 sd 0.000000 min +0.000051 max +0.000052
+  part edge placebo mean -0.000146 sd 0.000075 min -0.000268 max +0.000054
+  part div  placebo mean -0.002204 sd 0.000909 min -0.003911 max -0.000913
+  counts mean {'edge_tp': -21.35, 'edge_fp': -2.1, 'edge_fn': 21.35, 'division_tp': -4.35, 'division_fp': -1.15, 'division_fn': 4.35, 'num_pred_nodes': -2931.8}
+  counts per k: [(-28, -5, -6, -2, -2931), (-31, 0, -5, -2, -2932), (-23, -2, -7, 0, -2931), (-16, -1, -2, -1, -2933), (-17, -2, -2, 0, -2929), (-16, 0, -3, 0, -2933), (-23, 3, -4, -1, -2932), (-32, 1, -5, 0, -2934), (-20, -8, -6, -2, -2932), (-19, -5, -3, -2, -2933), (-24, 1, -4, -3, -2933), (-22, 8, -4, 0, -2929), (-31, 5, -7, -2, -2933), (-15, 1, -3, -1, -2932), (-28, -2, -7, -2, -2930), (-20, -7, -5, -1, -2933), (-23, -10, -5, -1, -2931), (-20, 1, -2, -1, -2933), (-6, -14, -3, -2, -2929), (-13, -6, -4, 0, -2933)]
+
+== placebo Acd (component-only vs the corresponding single rule on P15), K=20
+  all      obs +0.00010 | placebo mean -0.00006 sd 0.00005 min -0.00017 max +0.00005 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00016
+  44b6     obs +0.00047 | placebo mean -0.00019 sd 0.00022 min -0.00059 max +0.00020 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00066
+  6bba     obs +0.00003 | placebo mean -0.00004 sd 0.00004 min -0.00012 max +0.00002 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00007
+  clean40  obs +0.00010 | placebo mean -0.00011 sd 0.00014 min -0.00043 max +0.00005 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00021
+  part node placebo mean +0.000011 sd 0.000000 min +0.000011 max +0.000011
+  part edge placebo mean -0.000071 sd 0.000046 min -0.000183 max +0.000035
+  part div  placebo mean +0.000000 sd 0.000000 min +0.000000 max +0.000000
+  counts mean {'edge_tp': -7.35, 'edge_fp': 2.25, 'edge_fn': 7.35, 'division_tp': 0.0, 'division_fp': 0.0, 'division_fn': 0.0, 'num_pred_nodes': -849.0}
+  counts per k: [(-6, 2, 0, 0, -849), (-12, 2, 0, 0, -849), (-9, 5, 0, 0, -849), (-3, -3, 0, 0, -849), (-6, 2, 0, 0, -849), (-8, 3, 0, 0, -849), (-11, 3, 0, 0, -849), (-14, 11, 0, 0, -849), (-8, 3, 0, 0, -849), (-8, 1, 0, 0, -849), (-5, 4, 0, 0, -849), (-8, 6, 0, 0, -849), (-7, 6, 0, 0, -849), (-6, 0, 0, 0, -849), (-7, 2, 0, 0, -849), (-8, 1, 0, 0, -849), (-7, 0, 0, 0, -849), (-12, 3, 0, 0, -849), (0, -5, 0, 0, -849), (-2, -1, 0, 0, -849)]
+
+== placebo Aff (component-only vs the corresponding single rule on P15), K=20
+  all      obs +0.00008 | placebo mean +0.00006 sd 0.00004 min -0.00004 max +0.00014 | #placebo>=obs 8/20  one-sided p=0.429 | obs-mean +0.00002
+  44b6     obs +0.00003 | placebo mean +0.00014 sd 0.00016 min -0.00012 max +0.00035 | #placebo>=obs 12/20  one-sided p=0.619 | obs-mean -0.00011
+  6bba     obs +0.00009 | placebo mean +0.00005 sd 0.00004 min -0.00002 max +0.00014 | #placebo>=obs 2/20  one-sided p=0.143 | obs-mean +0.00004
+  clean40  obs +0.00002 | placebo mean +0.00002 sd 0.00003 min -0.00011 max +0.00007 | #placebo>=obs 12/20  one-sided p=0.619 | obs-mean +0.00000
+  part node placebo mean +0.000030 sd 0.000000 min +0.000030 max +0.000030
+  part edge placebo mean +0.000032 sd 0.000039 min -0.000066 max +0.000107
+  part div  placebo mean +0.000000 sd 0.000000 min +0.000000 max +0.000000
+  counts mean {'edge_tp': 0.45, 'edge_fp': -4.05, 'edge_fn': -0.45, 'division_tp': 0.0, 'division_fp': 0.0, 'division_fn': 0.0, 'num_pred_nodes': -1550.8}
+  counts per k: [(-3, -2, 0, 0, -1550), (1, -3, 0, 0, -1551), (3, -6, 0, 0, -1550), (-6, 3, 0, 0, -1552), (-4, -4, 0, 0, -1548), (1, -3, 0, 0, -1552), (-1, 0, 0, 0, -1551), (-6, -8, 0, 0, -1553), (3, -6, 0, 0, -1551), (0, -4, 0, 0, -1552), (0, -2, 0, 0, -1552), (-1, -1, 0, 0, -1548), (2, -5, 0, 0, -1552), (3, -7, 0, 0, -1551), (1, -2, 0, 0, -1549), (3, -6, 0, 0, -1552), (5, -10, 0, 0, -1550), (2, -2, 0, 0, -1552), (3, -6, 0, 0, -1548), (3, -7, 0, 0, -1552)]
+
+== placebo Asb (component-only vs the corresponding single rule on P15), K=20
+  all      obs +0.00042 | placebo mean -0.00003 sd 0.00004 min -0.00011 max +0.00002 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00045
+  44b6     obs +0.00102 | placebo mean -0.00003 sd 0.00014 min -0.00039 max +0.00025 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00105
+  6bba     obs +0.00028 | placebo mean -0.00003 sd 0.00004 min -0.00010 max +0.00001 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00031
+  clean40  obs +0.00139 | placebo mean -0.00004 sd 0.00007 min -0.00021 max +0.00005 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00144
+  part node placebo mean +0.000011 sd 0.000000 min +0.000011 max +0.000011
+  part edge placebo mean -0.000043 sd 0.000041 min -0.000121 max +0.000013
+  part div  placebo mean +0.000000 sd 0.000000 min +0.000000 max +0.000000
+  counts mean {'edge_tp': -6.3, 'edge_fp': -0.6, 'edge_fn': 6.3, 'division_tp': 0.0, 'division_fp': 0.0, 'division_fn': 0.0, 'num_pred_nodes': -537.0}
+  counts per k: [(0, 0, 0, 0, -537), (-6, -2, 0, 0, -537), (-7, -1, 0, 0, -537), (-11, 1, 0, 0, -537), (-1, -3, 0, 0, -537), (-1, -1, 0, 0, -537), (-10, -1, 0, 0, -537), (-4, 0, 0, 0, -537), (-3, -3, 0, 0, -537), (-12, 1, 0, 0, -537), (0, 0, 0, 0, -537), (-3, 0, 0, 0, -537), (-14, -1, 0, 0, -537), (-6, -1, 0, 0, -537), (-4, 0, 0, 0, -537), (-11, -4, 0, 0, -537), (-3, -2, 0, 0, -537), (-12, 3, 0, 0, -537), (-14, 2, 0, 0, -537), (-4, 0, 0, 0, -537)]
+
+== placebo Bsb (component-only vs the corresponding single rule on P15), K=20
+  all      obs +0.00042 | placebo mean -0.00230 sd 0.00094 min -0.00402 max -0.00095 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00272
+  44b6     obs +0.00102 | placebo mean -0.00311 sd 0.00230 min -0.00626 max +0.00001 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00413
+  6bba     obs +0.00028 | placebo mean -0.00211 sd 0.00090 min -0.00423 max -0.00071 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00239
+  clean40  obs +0.00139 | placebo mean -0.00198 sd 0.00181 min -0.00576 max +0.00001 | #placebo>=obs 0/20  one-sided p=0.048 | obs-mean +0.00338
+  part node placebo mean +0.000011 sd 0.000000 min +0.000011 max +0.000011
+  part edge placebo mean -0.000107 sd 0.000046 min -0.000224 max -0.000046
+  part div  placebo mean -0.002204 sd 0.000909 min -0.003911 max -0.000913
+  counts mean {'edge_tp': -14.45, 'edge_fp': -0.3, 'edge_fn': 14.45, 'division_tp': -4.35, 'division_fp': -1.15, 'division_fn': 4.35, 'num_pred_nodes': -532.0}
+  counts per k: [(-19, -5, -6, -2, -532), (-20, 1, -5, -2, -532), (-17, -1, -7, 0, -532), (-7, -1, -2, -1, -532), (-7, 0, -2, 0, -532), (-9, 0, -3, 0, -532), (-11, 0, -4, -1, -532), (-12, -2, -5, 0, -532), (-15, -5, -6, -2, -532), (-11, -2, -3, -2, -532), (-19, -1, -4, -3, -532), (-13, 3, -4, 0, -532), (-26, 4, -7, -2, -532), (-12, 8, -3, -1, -532), (-22, -2, -7, -2, -532), (-15, -2, -5, -1, -532), (-21, 0, -5, -1, -532), (-10, 0, -2, -1, -532), (-9, -3, -3, -2, -532), (-14, 2, -4, 0, -532)]
+
+matching A: P17 removed 2939 nodes; placebo removed min 2934 max 2939; shortfall per comp (max over k) {'cd': 0, 'ff': 0, 'sb': 0}
+
+matching B: P17 removed 2939 nodes; placebo removed min 2929 max 2934; shortfall per comp (max over k) {'cd': 0, 'ff': 0, 'sb': 5}
+rule node totals {'cd': 849, 'ff': 1553, 'sb': 537, 'all': 2939}
+movies with any placebo shortfall (A): []
+
+== forks: P15 total forks 3285, TP forks 67, FP forks 28 (official score_divisions)
+  P17 cd  lost forks 1: TP 0 FP 0 | []
+  P17 ff  lost forks 0: TP 0 FP 0 | []
+  P17 sb  lost forks 219: TP 0 FP 2 | [('44b6_c50204e0', 14037), ('6bba_5c824876', 24255)]
+  P17 all lost forks 220: TP 0 FP 2 | [('44b6_c50204e0', 14037), ('6bba_5c824876', 24255)]
+  placebo A lost forks (n, TP, FP) per k: [(0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (1, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0)]
+  placebo B lost forks (n, TP, FP) per k: [(217, 6, 2), (217, 5, 2), (217, 7, 0), (217, 2, 1), (217, 2, 0), (218, 3, 0), (217, 4, 1), (217, 5, 0), (217, 6, 2), (217, 3, 2), (217, 4, 3), (217, 4, 0), (217, 7, 2), (217, 3, 1), (217, 7, 2), (217, 5, 1), (217, 5, 1), (217, 2, 1), (217, 3, 2), (217, 4, 0)]
+  random-fork permutation (all P17 lost forks, per-movie matched n=220): observed TP 0 FP 2 -> div part +0.00042 | random mean -0.00174, E[TP lost] 3.66 E[FP lost] 1.48, P(div part >= obs) = 0.0084, P(TP lost = 0) = 0.019, P(FP lost >= 2) = 0.437
+  random-fork permutation (shortbranch lost forks, per-movie matched n=219): observed TP 0 FP 2 -> div part +0.00042 | random mean -0.00173, E[TP lost] 3.64 E[FP lost] 1.53, P(div part >= obs) = 0.0082, P(TP lost = 0) = 0.016, P(FP lost >= 2) = 0.456

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# data and run outputs never belong in this repository
+*.zarr/
+*.geff/
+*.npz
+*.pt
+*.pth
+data/
+out/
+runs/
+kaggle.json
+.env

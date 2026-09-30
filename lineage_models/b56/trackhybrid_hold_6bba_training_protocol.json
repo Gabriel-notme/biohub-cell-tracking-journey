@@ -1,0 +1,82 @@
+{
+  "out": "TrackHybrid_hold_6bba",
+  "seed": 137,
+  "hold_embryo": "6bba",
+  "seconds": 3600,
+  "steps": 18000,
+  "batch": 32,
+  "data": "track_motion3",
+  "channels": 3,
+  "initialize": "Track3_hold_6bba/best.pt",
+  "ranking_weight": 0.6,
+  "train": [
+    "44b6_2a2eff9f",
+    "44b6_d754aa59",
+    "44b6_706092f0",
+    "44b6_a21120c2",
+    "44b6_d5e7d891",
+    "44b6_e35b117d",
+    "44b6_2f31fc2f",
+    "44b6_ddf577ad",
+    "44b6_abf82518",
+    "44b6_9bfa6a0a",
+    "44b6_90724892",
+    "44b6_1574802b",
+    "44b6_33b596bf",
+    "44b6_3bb3690f",
+    "44b6_415c0a3a",
+    "44b6_24264f12",
+    "44b6_18ced818",
+    "44b6_53f95252",
+    "44b6_71a4179f",
+    "44b6_7e557709",
+    "44b6_db3c847b",
+    "44b6_8f5ab931",
+    "44b6_5740d24b",
+    "44b6_3a861e03",
+    "44b6_c771cb04",
+    "44b6_81c256f0",
+    "44b6_b2c44266",
+    "44b6_c96cfa10",
+    "44b6_0db75fae",
+    "44b6_e57ff5c6",
+    "44b6_c15fded2",
+    "44b6_cf2536e8",
+    "44b6_a2bb48bb",
+    "44b6_e29f0176",
+    "44b6_0c582fdc"
+  ],
+  "valid": [
+    "6bba_5c824876",
+    "6bba_d2b9fc0c",
+    "6bba_74686d6a",
+    "6bba_2819ca14",
+    "6bba_2312ac41",
+    "6bba_df673a83",
+    "6bba_eebc57a5",
+    "6bba_91951b3a",
+    "6bba_767a1e17"
+  ],
+  "initialization": "Track3_hold_6bba/best.pt",
+  "config": {
+    "width": 64,
+    "channels": 3,
+    "edge_dim": 338,
+    "fork_dim": 530
+  },
+  "examples": {
+    "edge": 64517,
+    "fork": 88901
+  },
+  "sampling_importance": {
+    "edge": {
+      "maximum": 1.0,
+      "mean": 1.0
+    },
+    "fork": {
+      "maximum": 1.0,
+      "mean": 1.0
+    }
+  },
+  "training_source_sha256": "d0004e46628c7bce83f4326dc7dec9bd478639ee4a7892be71d50b00e7d0f2c6"
+}

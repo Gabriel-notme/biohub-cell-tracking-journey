@@ -1,0 +1,14 @@
+P21 pre-registration (written 2026-09-28 18:30 UTC, before any s85/s80/s875/p15s85 result is seen)
+Candidate: P21 = P20 config with division-completion th_start 0.85 (start-type only; stolen 0.97 unchanged). Config-only change.
+Rationale: public LB B5 0.965 -> P2 (start-type dc only) 0.970 -> P1 (+stolen) 0.971: start-type dc transfers to the public embryos
+(public gain >= local clean40 gain). Public weights: division TP ~ +0.0016, FP ~ -0.0007 -> break-even precision ~30% on evaluable forks.
+ACCEPT iff all of:
+ A1 s85 vs p20ref (full P-stage, 199 movies): score delta >= 0 AND division dTP >= 0.43 * (dTP + dFP) of newly evaluable forks
+    (precision >= 30% => public-positive), with dTP >= 1.
+ A2 clean40 (hold36+prev4, never seen by b1) delta >= 0.
+ A3 neighbours: s875b vs p20ref delta >= 0 (the half-step must not be negative); s80b reported (not required).
+ A4 cross-base: p15s85 vs P15 delta has the same sign as s85 vs p20ref (>= 0).
+ A5 p20ref reproduces the P20/P19R per-movie rows exactly (pipeline sanity on the new pod), errors 0 in every run.
+ A6 Kaggle preview-4 of the P21 kernel == local (VERIFY_OK), runtime within 10 min of P20.
+If A1-A4 fail for 0.85 but pass for 0.875 -> use 0.875. If both fail -> no division bet; P21 is not a threshold variant.
+Reported regardless: node/edge/division split, per embryo, per set, movies changed, drop-top-k.

@@ -1,0 +1,81 @@
+movies 199 {'seq_cd': 199, 'seq_ff': 199, 'seq_st': 199, 'seq_tt': 199, 'seq_par': 199, 'seq_bd': 199, 'seq_dup': 199, 'loo_cd': 199, 'loo_ff': 199, 'loo_st': 199, 'loo_tt': 199, 'loo_dup': 199}
+
+== seq_cd (K=500): obs dTP -1 dFP -14 nodes -849 | placebo mean dTP -8.57 dFP +1.90 nodes -849.0 | shortfall nodes/draw +0.00
+   all      obs +0.000101 | node-only +0.000011 | placebo mean -0.000067 sd 0.000051 q05 -0.000151 q95 +0.000015 max +0.000089 | #pl>=obs 0/500 (ties 0) p=0.0020 mid-p=0.0020 | recomb p=0.00025 | obs-mean +0.000168
+   44b6     obs +0.000474 | node-only +0.000022 | placebo mean -0.000156 sd 0.000209 q05 -0.000545 q95 +0.000153 max +0.000479 | #pl>=obs 1/500 (ties 0) p=0.0040 mid-p=0.0040 | recomb p=0.00010 | obs-mean +0.000630
+   6bba     obs +0.000032 | node-only +0.000009 | placebo mean -0.000051 sd 0.000049 q05 -0.000131 q95 +0.000024 max +0.000068 | #pl>=obs 20/500 (ties 0) p=0.0419 mid-p=0.0419 | recomb p=0.03400 | obs-mean +0.000083
+   clean40  obs +0.000096 | node-only +0.000012 | placebo mean -0.000111 sd 0.000141 q05 -0.000384 q95 +0.000054 max +0.000096 | #pl>=obs 3/500 (ties 3) p=0.0080 mid-p=0.0050 | recomb p=0.00810 | obs-mean +0.000207
+
+== seq_ff (K=500): obs dTP +2 dFP -5 nodes -1553 | placebo mean dTP -1.13 dFP -2.96 nodes -1553.0 | shortfall nodes/draw +0.00
+   all      obs +0.000081 | node-only +0.000030 | placebo mean +0.000043 sd 0.000036 q05 -0.000021 q95 +0.000102 max +0.000173 | #pl>=obs 74/500 (ties 0) p=0.1497 mid-p=0.1497 | recomb p=0.15009 | obs-mean +0.000038
+   44b6     obs +0.000026 | node-only +0.000026 | placebo mean +0.000080 sd 0.000150 q05 -0.000116 q95 +0.000301 max +0.000353 | #pl>=obs 181/500 (ties 0) p=0.3633 mid-p=0.3633 | recomb p=0.36808 | obs-mean -0.000055
+   6bba     obs +0.000091 | node-only +0.000031 | placebo mean +0.000036 sd 0.000035 q05 -0.000023 q95 +0.000090 max +0.000150 | #pl>=obs 21/500 (ties 0) p=0.0439 mid-p=0.0439 | recomb p=0.04930 | obs-mean +0.000055
+   clean40  obs +0.000021 | node-only +0.000021 | placebo mean +0.000011 sd 0.000074 q05 -0.000152 q95 +0.000069 max +0.000198 | #pl>=obs 443/500 (ties 0) p=0.8862 mid-p=0.8862 | recomb p=0.88386 | obs-mean +0.000011
+
+== seq_st (K=500): obs dTP +0 dFP -2 nodes -263 | placebo mean dTP -2.10 dFP +0.02 nodes -263.0 | shortfall nodes/draw +0.00
+   all      obs +0.000018 | node-only +0.000004 | placebo mean -0.000012 sd 0.000016 q05 -0.000039 q95 +0.000011 max +0.000068 | #pl>=obs 15/500 (ties 1) p=0.0319 mid-p=0.0309 | recomb p=0.03055 | obs-mean +0.000030
+   44b6     obs +0.000050 | node-only +0.000005 | placebo mean -0.000019 sd 0.000055 q05 -0.000132 q95 +0.000050 max +0.000281 | #pl>=obs 31/500 (ties 21) p=0.0639 mid-p=0.0429 | recomb p=0.05235 | obs-mean +0.000070
+   6bba     obs +0.000012 | node-only +0.000004 | placebo mean -0.000010 sd 0.000017 q05 -0.000040 q95 +0.000012 max +0.000098 | #pl>=obs 31/500 (ties 11) p=0.0639 mid-p=0.0529 | recomb p=0.07015 | obs-mean +0.000023
+   clean40  obs +0.000004 | node-only +0.000004 | placebo mean -0.000013 sd 0.000043 q05 -0.000087 q95 +0.000004 max +0.000219 | #pl>=obs 366/500 (ties 355) p=0.7325 mid-p=0.3782 | recomb p=0.72556 | obs-mean +0.000016
+
+== seq_tt (K=500): obs dTP +0 dFP -1 nodes -384 | placebo mean dTP -2.76 dFP +0.14 nodes -384.0 | shortfall nodes/draw +0.00
+   all      obs +0.000012 | node-only +0.000005 | placebo mean -0.000017 sd 0.000020 q05 -0.000054 q95 +0.000012 max +0.000063 | #pl>=obs 24/500 (ties 10) p=0.0499 mid-p=0.0399 | recomb p=0.05560 | obs-mean +0.000029
+   44b6     obs +0.000009 | node-only +0.000009 | placebo mean -0.000022 sd 0.000076 q05 -0.000177 q95 +0.000054 max +0.000330 | #pl>=obs 271/500 (ties 209) p=0.5429 mid-p=0.3343 | recomb p=0.53392 | obs-mean +0.000031
+   6bba     obs +0.000013 | node-only +0.000004 | placebo mean -0.000016 sd 0.000020 q05 -0.000056 q95 +0.000012 max +0.000047 | #pl>=obs 24/500 (ties 13) p=0.0499 mid-p=0.0369 | recomb p=0.04815 | obs-mean +0.000028
+   clean40  obs +0.000005 | node-only +0.000005 | placebo mean -0.000014 sd 0.000040 q05 -0.000085 q95 +0.000005 max +0.000135 | #pl>=obs 331/500 (ties 311) p=0.6627 mid-p=0.3523 | recomb p=0.66002 | obs-mean +0.000019
+
+== seq_par (K=500): obs dTP +0 dFP +0 nodes -99 | placebo mean dTP -1.37 dFP +0.09 nodes -99.0 | shortfall nodes/draw +0.00
+   all      obs +0.000003 | node-only +0.000003 | placebo mean -0.000008 sd 0.000020 q05 -0.000048 q95 +0.000003 max +0.000104 | #pl>=obs 312/500 (ties 296) p=0.6248 mid-p=0.3293 | recomb p=0.62987 | obs-mean +0.000011
+   44b6     obs +0.000000 | node-only +0.000000 | placebo mean -0.000001 sd 0.000029 q05 +0.000000 q95 +0.000000 max +0.000280 | #pl>=obs 490/500 (ties 487) p=0.9800 mid-p=0.4940 | recomb p=0.98205 | obs-mean +0.000001
+   6bba     obs +0.000004 | node-only +0.000004 | placebo mean -0.000009 sd 0.000023 q05 -0.000057 q95 +0.000004 max +0.000123 | #pl>=obs 317/500 (ties 304) p=0.6347 mid-p=0.3313 | recomb p=0.63877 | obs-mean +0.000013
+   clean40  obs +0.000004 | node-only +0.000004 | placebo mean -0.000011 sd 0.000055 q05 -0.000131 q95 +0.000004 max +0.000263 | #pl>=obs 450/500 (ties 447) p=0.9002 mid-p=0.4541 | recomb p=0.90190 | obs-mean +0.000015
+
+== seq_bd (K=500): obs dTP +1 dFP -1 nodes -1496 | placebo mean dTP -5.22 dFP +0.09 nodes -1503.0 | shortfall nodes/draw -7.00
+   all      obs +0.000061 | node-only +0.000047 | placebo mean +0.000007 sd 0.000031 q05 -0.000049 q95 +0.000052 max +0.000089 | #pl>=obs 15/500 (ties 0) p=0.0319 mid-p=0.0319 | recomb p=0.02405 | obs-mean +0.000054
+   44b6     obs +0.000013 | node-only +0.000013 | placebo mean -0.000060 sd 0.000078 q05 -0.000227 q95 +0.000014 max +0.000014 | #pl>=obs 125/500 (ties 0) p=0.2515 mid-p=0.2515 | recomb p=0.27169 | obs-mean +0.000073
+   6bba     obs +0.000070 | node-only +0.000053 | placebo mean +0.000019 sd 0.000034 q05 -0.000042 q95 +0.000069 max +0.000119 | #pl>=obs 19/500 (ties 0) p=0.0399 mid-p=0.0399 | recomb p=0.04140 | obs-mean +0.000051
+   clean40  obs +0.000045 | node-only +0.000045 | placebo mean -0.000009 sd 0.000095 q05 -0.000178 q95 +0.000083 max +0.000170 | #pl>=obs 32/500 (ties 0) p=0.0659 mid-p=0.0659 | recomb p=0.06810 | obs-mean +0.000054
+
+== seq_dup (K=500): obs dTP +0 dFP -3 nodes -746 | placebo mean dTP -5.93 dFP +0.06 nodes -746.0 | shortfall nodes/draw +0.00
+   all      obs +0.000033 | node-only +0.000012 | placebo mean -0.000033 sd 0.000033 q05 -0.000086 q95 +0.000019 max +0.000054 | #pl>=obs 6/500 (ties 0) p=0.0140 mid-p=0.0140 | recomb p=0.01665 | obs-mean +0.000066
+   44b6     obs +0.000060 | node-only +0.000015 | placebo mean -0.000041 sd 0.000097 q05 -0.000216 q95 +0.000108 max +0.000291 | #pl>=obs 57/500 (ties 18) p=0.1158 mid-p=0.0978 | recomb p=0.10444 | obs-mean +0.000101
+   6bba     obs +0.000028 | node-only +0.000012 | placebo mean -0.000031 sd 0.000034 q05 -0.000092 q95 +0.000019 max +0.000061 | #pl>=obs 13/500 (ties 0) p=0.0279 mid-p=0.0279 | recomb p=0.02665 | obs-mean +0.000060
+   clean40  obs +0.000013 | node-only +0.000013 | placebo mean -0.000042 sd 0.000082 q05 -0.000211 q95 +0.000015 max +0.000228 | #pl>=obs 210/500 (ties 185) p=0.4212 mid-p=0.2365 | recomb p=0.42163 | obs-mean +0.000055
+
+== loo_cd (K=500): obs dTP +5 dFP -15 nodes -849 | placebo mean dTP -8.55 dFP +1.93 nodes -849.0 | shortfall nodes/draw +0.00
+   all      obs +0.000154 | node-only +0.000011 | placebo mean -0.000067 sd 0.000053 q05 -0.000153 q95 +0.000017 max +0.000088 | #pl>=obs 0/500 (ties 0) p=0.0020 mid-p=0.0020 | recomb p=0.00005 | obs-mean +0.000221
+   44b6     obs +0.000483 | node-only +0.000022 | placebo mean -0.000153 sd 0.000198 q05 -0.000460 q95 +0.000112 max +0.000434 | #pl>=obs 0/500 (ties 0) p=0.0020 mid-p=0.0020 | recomb p=0.00005 | obs-mean +0.000636
+   6bba     obs +0.000093 | node-only +0.000009 | placebo mean -0.000051 sd 0.000048 q05 -0.000132 q95 +0.000024 max +0.000110 | #pl>=obs 1/500 (ties 0) p=0.0040 mid-p=0.0040 | recomb p=0.00070 | obs-mean +0.000144
+   clean40  obs +0.000054 | node-only +0.000012 | placebo mean -0.000113 sd 0.000135 q05 -0.000341 q95 +0.000054 max +0.000096 | #pl>=obs 46/500 (ties 44) p=0.0938 mid-p=0.0499 | recomb p=0.09455 | obs-mean +0.000167
+
+== loo_ff (K=500): obs dTP +2 dFP -5 nodes -1553 | placebo mean dTP -1.06 dFP -3.11 nodes -1552.0 | shortfall nodes/draw +1.00
+   all      obs +0.000081 | node-only +0.000030 | placebo mean +0.000044 sd 0.000037 q05 -0.000015 q95 +0.000102 max +0.000138 | #pl>=obs 75/500 (ties 0) p=0.1517 mid-p=0.1517 | recomb p=0.15429 | obs-mean +0.000036
+   44b6     obs +0.000026 | node-only +0.000026 | placebo mean +0.000085 sd 0.000147 q05 -0.000116 q95 +0.000301 max +0.000353 | #pl>=obs 196/500 (ties 0) p=0.3932 mid-p=0.3932 | recomb p=0.38188 | obs-mean -0.000060
+   6bba     obs +0.000091 | node-only +0.000031 | placebo mean +0.000037 sd 0.000034 q05 -0.000022 q95 +0.000089 max +0.000142 | #pl>=obs 21/500 (ties 0) p=0.0439 mid-p=0.0439 | recomb p=0.04715 | obs-mean +0.000054
+   clean40  obs +0.000021 | node-only +0.000021 | placebo mean +0.000014 sd 0.000059 q05 -0.000112 q95 +0.000071 max +0.000156 | #pl>=obs 442/500 (ties 0) p=0.8842 mid-p=0.8842 | recomb p=0.89136 | obs-mean +0.000007
+
+== loo_st (K=500): obs dTP +0 dFP -2 nodes -263 | placebo mean dTP -2.10 dFP +0.02 nodes -263.0 | shortfall nodes/draw +0.00
+   all      obs +0.000018 | node-only +0.000004 | placebo mean -0.000012 sd 0.000017 q05 -0.000041 q95 +0.000011 max +0.000047 | #pl>=obs 20/500 (ties 6) p=0.0419 mid-p=0.0359 | recomb p=0.03255 | obs-mean +0.000030
+   44b6     obs +0.000050 | node-only +0.000005 | placebo mean -0.000020 sd 0.000056 q05 -0.000133 q95 +0.000050 max +0.000238 | #pl>=obs 31/500 (ties 22) p=0.0639 mid-p=0.0419 | recomb p=0.05330 | obs-mean +0.000070
+   6bba     obs +0.000012 | node-only +0.000004 | placebo mean -0.000010 sd 0.000017 q05 -0.000040 q95 +0.000012 max +0.000055 | #pl>=obs 39/500 (ties 21) p=0.0798 mid-p=0.0589 | recomb p=0.07470 | obs-mean +0.000023
+   clean40  obs +0.000004 | node-only +0.000004 | placebo mean -0.000012 sd 0.000039 q05 -0.000085 q95 +0.000004 max +0.000219 | #pl>=obs 360/500 (ties 347) p=0.7206 mid-p=0.3743 | recomb p=0.72551 | obs-mean +0.000016
+
+== loo_tt (K=500): obs dTP +0 dFP -1 nodes -384 | placebo mean dTP -2.94 dFP +0.12 nodes -384.0 | shortfall nodes/draw +0.00
+   all      obs +0.000012 | node-only +0.000005 | placebo mean -0.000018 sd 0.000022 q05 -0.000054 q95 +0.000012 max +0.000054 | #pl>=obs 27/500 (ties 7) p=0.0559 mid-p=0.0489 | recomb p=0.06665 | obs-mean +0.000030
+   44b6     obs +0.000009 | node-only +0.000009 | placebo mean -0.000026 sd 0.000081 q05 -0.000140 q95 +0.000054 max +0.000339 | #pl>=obs 251/500 (ties 198) p=0.5030 mid-p=0.3054 | recomb p=0.50392 | obs-mean +0.000035
+   6bba     obs +0.000013 | node-only +0.000004 | placebo mean -0.000016 sd 0.000021 q05 -0.000056 q95 +0.000013 max +0.000072 | #pl>=obs 33/500 (ties 13) p=0.0679 mid-p=0.0549 | recomb p=0.06350 | obs-mean +0.000029
+   clean40  obs +0.000005 | node-only +0.000005 | placebo mean -0.000020 sd 0.000053 q05 -0.000127 q95 +0.000005 max +0.000262 | #pl>=obs 298/500 (ties 277) p=0.5968 mid-p=0.3204 | recomb p=0.60197 | obs-mean +0.000025
+
+== loo_dup (K=500): obs dTP +0 dFP -3 nodes -746 | placebo mean dTP -6.46 dFP +0.38 nodes -746.0 | shortfall nodes/draw +0.00
+   all      obs +0.000033 | node-only +0.000012 | placebo mean -0.000039 sd 0.000035 q05 -0.000099 q95 +0.000011 max +0.000062 | #pl>=obs 8/500 (ties 0) p=0.0180 mid-p=0.0180 | recomb p=0.00735 | obs-mean +0.000072
+   44b6     obs +0.000060 | node-only +0.000015 | placebo mean -0.000053 sd 0.000101 q05 -0.000224 q95 +0.000060 max +0.000251 | #pl>=obs 44/500 (ties 25) p=0.0898 mid-p=0.0649 | recomb p=0.09075 | obs-mean +0.000113
+   6bba     obs +0.000028 | node-only +0.000012 | placebo mean -0.000036 sd 0.000037 q05 -0.000095 q95 +0.000012 max +0.000071 | #pl>=obs 11/500 (ties 1) p=0.0240 mid-p=0.0230 | recomb p=0.01520 | obs-mean +0.000065
+   clean40  obs +0.000013 | node-only +0.000013 | placebo mean -0.000036 sd 0.000079 q05 -0.000205 q95 +0.000055 max +0.000401 | #pl>=obs 228/500 (ties 194) p=0.4571 mid-p=0.2635 | recomb p=0.44148 | obs-mean +0.000048
+Holm-adjusted exact p (seq, all): seq_cd 0.0120 seq_ff 0.2994 seq_st 0.1597 seq_tt 0.1597 seq_par 0.6248 seq_bd 0.1597
+Holm-adjusted exact p (seq, 44b6): seq_cd 0.0240 seq_ff 1.0000 seq_st 0.3194 seq_tt 1.0000 seq_par 1.0000 seq_bd 1.0000
+Holm-adjusted exact p (seq, 6bba): seq_cd 0.2395 seq_ff 0.2395 seq_st 0.2395 seq_tt 0.2395 seq_par 0.6347 seq_bd 0.2395
+Holm-adjusted exact p (seq, clean40): seq_cd 0.0479 seq_ff 1.0000 seq_st 1.0000 seq_tt 1.0000 seq_par 1.0000 seq_bd 0.3293
+Holm-adjusted exact p (loo, all): loo_cd 0.0080 loo_ff 0.1517 loo_st 0.1257 loo_tt 0.1257
+Holm-adjusted exact p (loo, 44b6): loo_cd 0.0080 loo_ff 0.7864 loo_st 0.1916 loo_tt 0.7864
+Holm-adjusted exact p (loo, 6bba): loo_cd 0.0160 loo_ff 0.1317 loo_st 0.1357 loo_tt 0.1357
+Holm-adjusted exact p (loo, clean40): loo_cd 0.3752 loo_ff 1.0000 loo_st 1.0000 loo_tt 1.0000

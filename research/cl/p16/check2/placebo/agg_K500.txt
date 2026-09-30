@@ -1,0 +1,78 @@
+movies 199 K 500 | reduced-scorer verification: 348/348 checks equal to evalx.score_movie
+vectorised score == official summarise: ok
+
+== A  (obs = deployed P19-R removal applied alone on P15; placebo = matched random deletions, K=500)
+   counts obs  : dTP +2 dFP -23 dFN -2 dDivTP +0 dDivFP +0 nodes -4644
+   counts plac.: dTP -20.60 dFP -1.25 dFN +20.60 dDivTP +0.00 dDivFP +0.00 nodes -4650.0 (min -4651 max -4650) | shortfall nodes/draw -6.01
+   placebo draws with dTP<0: 1.000  dFP<0: 0.570  | P(dTP_pl <= obs dTP) 0.000  P(dFP_pl <= obs dFP) 0.000
+   all      obs +0.000276 | node-only +0.000100 | placebo mean -0.000046 sd 0.000076 q05 -0.000178 q50 -0.000050 q95 +0.000074 max +0.000202 P(pl>0) 0.276 | #pl>=obs 0/500 (ties 0) p=0.0020 mid-p=0.0020 | recomb R=20000 p=0.00010 | obs-mean +0.000322 z 4.21
+   44b6     obs +0.000573 | node-only +0.000076 | placebo mean -0.000181 sd 0.000280 q05 -0.000643 q50 -0.000170 q95 +0.000255 max +0.000615 P(pl>0) 0.254 | #pl>=obs 3/500 (ties 0) p=0.0080 mid-p=0.0080 | recomb R=20000 p=0.00305 | obs-mean +0.000754 z 2.69
+   6bba     obs +0.000221 | node-only +0.000104 | placebo mean -0.000021 sd 0.000078 q05 -0.000151 q50 -0.000020 q95 +0.000093 max +0.000209 P(pl>0) 0.390 | #pl>=obs 0/500 (ties 0) p=0.0020 mid-p=0.0020 | recomb R=20000 p=0.00075 | obs-mean +0.000242 z 3.12
+   clean40  obs +0.000175 | node-only +0.000091 | placebo mean -0.000145 sd 0.000202 q05 -0.000493 q50 -0.000095 q95 +0.000129 max +0.000344 P(pl>0) 0.242 | #pl>=obs 7/500 (ties 0) p=0.0160 mid-p=0.0160 | recomb R=20000 p=0.01565 | obs-mean +0.000320 z 1.59
+
+== cd  (obs = deployed cd removal applied alone on P15; placebo = matched random deletions, K=500)
+   counts obs  : dTP -1 dFP -14 dFN +1 dDivTP +0 dDivFP +0 nodes -849
+   counts plac.: dTP -8.58 dFP +1.89 dFN +8.58 dDivTP +0.00 dDivFP +0.00 nodes -849.0 (min -849 max -849) | shortfall nodes/draw 0.00
+   placebo draws with dTP<0: 0.984  dFP<0: 0.258  | P(dTP_pl <= obs dTP) 0.024  P(dFP_pl <= obs dFP) 0.000
+   all      obs +0.000101 | node-only +0.000011 | placebo mean -0.000067 sd 0.000050 q05 -0.000147 q50 -0.000066 q95 +0.000009 max +0.000066 P(pl>0) 0.088 | #pl>=obs 0/500 (ties 0) p=0.0020 mid-p=0.0020 | recomb R=20000 p=0.00020 | obs-mean +0.000168 z 3.34
+   44b6     obs +0.000474 | node-only +0.000022 | placebo mean -0.000172 sd 0.000214 q05 -0.000550 q50 -0.000164 q95 +0.000112 max +0.000389 P(pl>0) 0.252 | #pl>=obs 0/500 (ties 0) p=0.0020 mid-p=0.0020 | recomb R=20000 p=0.00025 | obs-mean +0.000646 z 3.02
+   6bba     obs +0.000032 | node-only +0.000009 | placebo mean -0.000048 sd 0.000049 q05 -0.000130 q50 -0.000044 q95 +0.000025 max +0.000143 P(pl>0) 0.146 | #pl>=obs 21/500 (ties 0) p=0.0439 mid-p=0.0439 | recomb R=20000 p=0.04530 | obs-mean +0.000080 z 1.63
+   clean40  obs +0.000096 | node-only +0.000012 | placebo mean -0.000103 sd 0.000144 q05 -0.000384 q50 -0.000077 q95 +0.000054 max +0.000096 P(pl>0) 0.406 | #pl>=obs 6/500 (ties 6) p=0.0140 mid-p=0.0080 | recomb R=20000 p=0.01295 | obs-mean +0.000200 z 1.39
+
+== ff  (obs = deployed ff removal applied alone on P15; placebo = matched random deletions, K=500)
+   counts obs  : dTP +2 dFP -5 dFN -2 dDivTP +0 dDivFP +0 nodes -1553
+   counts plac.: dTP -0.72 dFP -3.29 dFN +0.72 dDivTP +0.00 dDivFP +0.00 nodes -1553.0 (min -1553 max -1553) | shortfall nodes/draw 0.00
+   placebo draws with dTP<0: 0.504  dFP<0: 0.838  | P(dTP_pl <= obs dTP) 0.196  P(dFP_pl <= obs dFP) 0.336
+   all      obs +0.000080 | node-only +0.000030 | placebo mean +0.000048 sd 0.000036 q05 -0.000015 q50 +0.000051 q95 +0.000102 max +0.000131 P(pl>0) 0.906 | #pl>=obs 95/500 (ties 0) p=0.1916 mid-p=0.1916 | recomb R=20000 p=0.18589 | obs-mean +0.000032 z 0.90
+   44b6     obs +0.000026 | node-only +0.000026 | placebo mean +0.000108 sd 0.000151 q05 -0.000116 q50 +0.000026 q95 +0.000301 max +0.000352 P(pl>0) 0.822 | #pl>=obs 233/500 (ties 0) p=0.4671 mid-p=0.4671 | recomb R=20000 p=0.45223 | obs-mean -0.000082 z -0.54
+   6bba     obs +0.000091 | node-only +0.000031 | placebo mean +0.000037 sd 0.000033 q05 -0.000020 q50 +0.000039 q95 +0.000082 max +0.000116 P(pl>0) 0.858 | #pl>=obs 17/500 (ties 0) p=0.0359 mid-p=0.0359 | recomb R=20000 p=0.04685 | obs-mean +0.000053 z 1.63
+   clean40  obs +0.000021 | node-only +0.000021 | placebo mean +0.000015 sd 0.000057 q05 -0.000112 q50 +0.000022 q95 +0.000069 max +0.000198 P(pl>0) 0.898 | #pl>=obs 449/500 (ties 0) p=0.8982 mid-p=0.8982 | recomb R=20000 p=0.90160 | obs-mean +0.000006 z 0.11
+
+== st  (obs = deployed st removal applied alone on P15; placebo = matched random deletions, K=500)
+   counts obs  : dTP +0 dFP -5 dFN +0 dDivTP +0 dDivFP +0 nodes -263
+   counts plac.: dTP -2.11 dFP -0.03 dFN +2.11 dDivTP +0.00 dDivFP +0.00 nodes -263.0 (min -263 max -263) | shortfall nodes/draw 0.00
+   placebo draws with dTP<0: 0.860  dFP<0: 0.244  | P(dTP_pl <= obs dTP) 0.140  P(dFP_pl <= obs dFP) 0.000
+   all      obs +0.000039 | node-only +0.000004 | placebo mean -0.000012 sd 0.000017 q05 -0.000040 q50 -0.000011 q95 +0.000011 max +0.000047 P(pl>0) 0.232 | #pl>=obs 4/500 (ties 0) p=0.0100 mid-p=0.0100 | recomb R=20000 p=0.00830 | obs-mean +0.000051 z 3.04
+   44b6     obs +0.000140 | node-only +0.000005 | placebo mean -0.000022 sd 0.000056 q05 -0.000137 q50 +0.000005 q95 +0.000005 max +0.000238 P(pl>0) 0.624 | #pl>=obs 6/500 (ties 0) p=0.0140 mid-p=0.0140 | recomb R=20000 p=0.00955 | obs-mean +0.000162 z 2.88
+   6bba     obs +0.000020 | node-only +0.000004 | placebo mean -0.000010 sd 0.000017 q05 -0.000039 q50 -0.000006 q95 +0.000012 max +0.000055 P(pl>0) 0.274 | #pl>=obs 19/500 (ties 4) p=0.0399 mid-p=0.0359 | recomb R=20000 p=0.03415 | obs-mean +0.000030 z 1.80
+   clean40  obs +0.000046 | node-only +0.000004 | placebo mean -0.000011 sd 0.000040 q05 -0.000086 q50 +0.000004 q95 +0.000004 max +0.000219 P(pl>0) 0.734 | #pl>=obs 13/500 (ties 9) p=0.0279 mid-p=0.0190 | recomb R=20000 p=0.02415 | obs-mean +0.000057 z 1.42
+
+== tt  (obs = deployed tt removal applied alone on P15; placebo = matched random deletions, K=500)
+   counts obs  : dTP -6 dFP +3 dFN +6 dDivTP +0 dDivFP +0 nodes -384
+   counts plac.: dTP -2.63 dFP +0.12 dFN +2.63 dDivTP +0.00 dDivFP +0.00 nodes -384.0 (min -384 max -384) | shortfall nodes/draw 0.00
+   placebo draws with dTP<0: 0.894  dFP<0: 0.290  | P(dTP_pl <= obs dTP) 0.970  P(dFP_pl <= obs dFP) 0.972
+   all      obs -0.000061 | node-only +0.000005 | placebo mean -0.000015 sd 0.000021 q05 -0.000054 q50 -0.000017 q95 +0.000012 max +0.000063 P(pl>0) 0.182 | #pl>=obs 491/500 (ties 0) p=0.9820 mid-p=0.9820 | recomb R=20000 p=0.97675 | obs-mean -0.000046 z -2.18
+   44b6     obs -0.000089 | node-only +0.000009 | placebo mean -0.000026 sd 0.000080 q05 -0.000146 q50 +0.000007 q95 +0.000054 max +0.000379 P(pl>0) 0.528 | #pl>=obs 432/500 (ties 1) p=0.8643 mid-p=0.8633 | recomb R=20000 p=0.85206 | obs-mean -0.000063 z -0.79
+   6bba     obs -0.000056 | node-only +0.000004 | placebo mean -0.000013 sd 0.000020 q05 -0.000048 q50 -0.000013 q95 +0.000013 max +0.000056 P(pl>0) 0.266 | #pl>=obs 489/500 (ties 0) p=0.9780 mid-p=0.9780 | recomb R=20000 p=0.96735 | obs-mean -0.000043 z -2.09
+   clean40  obs +0.000005 | node-only +0.000005 | placebo mean -0.000020 sd 0.000051 q05 -0.000125 q50 +0.000005 q95 +0.000047 max +0.000217 P(pl>0) 0.638 | #pl>=obs 314/500 (ties 285) p=0.6287 mid-p=0.3443 | recomb R=20000 p=0.61797 | obs-mean +0.000025 z 0.50
+
+== par  (obs = deployed par removal applied alone on P15; placebo = matched random deletions, K=500)
+   counts obs  : dTP +0 dFP +0 dFN +0 dDivTP +0 dDivFP +0 nodes -99
+   counts plac.: dTP -1.32 dFP -0.02 dFN +1.32 dDivTP +0.00 dDivFP +0.00 nodes -99.0 (min -99 max -99) | shortfall nodes/draw 0.00
+   placebo draws with dTP<0: 0.380  dFP<0: 0.072  | P(dTP_pl <= obs dTP) 0.620  P(dFP_pl <= obs dFP) 0.908
+   all      obs +0.000003 | node-only +0.000003 | placebo mean -0.000007 sd 0.000020 q05 -0.000042 q50 +0.000003 q95 +0.000003 max +0.000104 P(pl>0) 0.638 | #pl>=obs 316/500 (ties 293) p=0.6327 mid-p=0.3403 | recomb R=20000 p=0.62797 | obs-mean +0.000010 z 0.49
+   44b6     obs +0.000000 | node-only +0.000000 | placebo mean -0.000002 sd 0.000029 q05 +0.000000 q50 +0.000000 q95 +0.000000 max +0.000233 P(pl>0) 0.974 | #pl>=obs 487/500 (ties 482) p=0.9741 mid-p=0.4930 | recomb R=20000 p=0.97500 | obs-mean +0.000002 z 0.08
+   6bba     obs +0.000004 | node-only +0.000004 | placebo mean -0.000008 sd 0.000023 q05 -0.000050 q50 +0.000004 q95 +0.000004 max +0.000123 P(pl>0) 0.654 | #pl>=obs 324/500 (ties 305) p=0.6487 mid-p=0.3443 | recomb R=20000 p=0.64217 | obs-mean +0.000011 z 0.48
+   clean40  obs +0.000004 | node-only +0.000004 | placebo mean -0.000012 sd 0.000051 q05 -0.000170 q50 +0.000004 q95 +0.000004 max +0.000089 P(pl>0) 0.896 | #pl>=obs 448/500 (ties 444) p=0.8962 mid-p=0.4531 | recomb R=20000 p=0.89741 | obs-mean +0.000016 z 0.31
+
+== bd  (obs = deployed bd removal applied alone on P15; placebo = matched random deletions, K=500)
+   counts obs  : dTP +1 dFP -1 dFN -1 dDivTP +0 dDivFP +0 nodes -1496
+   counts plac.: dTP -5.23 dFP +0.08 dFN +5.23 dDivTP +0.00 dDivFP +0.00 nodes -1502.0 (min -1503 max -1502) | shortfall nodes/draw 0.00
+   placebo draws with dTP<0: 0.950  dFP<0: 0.348  | P(dTP_pl <= obs dTP) 0.010  P(dFP_pl <= obs dFP) 0.348
+   all      obs +0.000061 | node-only +0.000047 | placebo mean +0.000007 sd 0.000032 q05 -0.000049 q50 +0.000009 q95 +0.000053 max +0.000088 P(pl>0) 0.660 | #pl>=obs 12/500 (ties 0) p=0.0259 mid-p=0.0259 | recomb R=20000 p=0.02345 | obs-mean +0.000055 z 1.71
+   44b6     obs +0.000013 | node-only +0.000013 | placebo mean -0.000067 sd 0.000081 q05 -0.000227 q50 -0.000035 q95 +0.000014 max +0.000014 P(pl>0) 0.190 | #pl>=obs 95/500 (ties 0) p=0.1916 mid-p=0.1916 | recomb R=20000 p=0.17769 | obs-mean +0.000080 z 0.99
+   6bba     obs +0.000070 | node-only +0.000053 | placebo mean +0.000020 sd 0.000035 q05 -0.000043 q50 +0.000026 q95 +0.000069 max +0.000111 P(pl>0) 0.744 | #pl>=obs 22/500 (ties 0) p=0.0459 mid-p=0.0459 | recomb R=20000 p=0.04400 | obs-mean +0.000050 z 1.42
+   clean40  obs +0.000045 | node-only +0.000045 | placebo mean -0.000014 sd 0.000101 q05 -0.000228 q50 +0.000041 q95 +0.000083 max +0.000170 P(pl>0) 0.674 | #pl>=obs 29/500 (ties 0) p=0.0599 mid-p=0.0599 | recomb R=20000 p=0.06135 | obs-mean +0.000059 z 0.58
+
+== dup  (obs = deployed dup removal applied alone on P15; placebo = matched random deletions, K=500)
+   counts obs  : dTP -6 dFP -2 dFN +6 dDivTP +0 dDivFP +0 nodes -746
+   counts plac.: dTP -6.06 dFP +0.07 dFN +6.06 dDivTP +0.00 dDivFP +0.00 nodes -746.0 (min -746 max -746) | shortfall nodes/draw 0.00
+   placebo draws with dTP<0: 0.976  dFP<0: 0.360  | P(dTP_pl <= obs dTP) 0.602  P(dFP_pl <= obs dFP) 0.188
+   all      obs -0.000019 | node-only +0.000012 | placebo mean -0.000034 sd 0.000033 q05 -0.000092 q50 -0.000033 q95 +0.000018 max +0.000090 P(pl>0) 0.134 | #pl>=obs 174/500 (ties 0) p=0.3493 mid-p=0.3493 | recomb R=20000 p=0.36088 | obs-mean +0.000015 z 0.44
+   44b6     obs +0.000051 | node-only +0.000015 | placebo mean -0.000050 sd 0.000106 q05 -0.000227 q50 -0.000034 q95 +0.000105 max +0.000337 P(pl>0) 0.386 | #pl>=obs 58/500 (ties 0) p=0.1178 mid-p=0.1178 | recomb R=20000 p=0.10559 | obs-mean +0.000101 z 0.96
+   6bba     obs -0.000032 | node-only +0.000012 | placebo mean -0.000031 sd 0.000034 q05 -0.000086 q50 -0.000032 q95 +0.000019 max +0.000131 P(pl>0) 0.174 | #pl>=obs 268/500 (ties 0) p=0.5369 mid-p=0.5369 | recomb R=20000 p=0.54227 | obs-mean -0.000001 z -0.04
+   clean40  obs +0.000055 | node-only +0.000013 | placebo mean -0.000043 sd 0.000082 q05 -0.000208 q50 -0.000032 q95 +0.000055 max +0.000228 P(pl>0) 0.448 | #pl>=obs 30/500 (ties 23) p=0.0619 mid-p=0.0389 | recomb R=20000 p=0.05190 | obs-mean +0.000098 z 1.19
+Holm-adjusted exact p (all): cd 0.0120 ff 0.5749 st 0.0499 tt 1.0000 par 1.0000 bd 0.1038
+Holm-adjusted exact p (44b6): cd 0.0120 ff 1.0000 st 0.0699 tt 1.0000 par 1.0000 bd 0.7665
+Holm-adjusted exact p (6bba): cd 0.2156 ff 0.2156 st 0.2156 tt 1.0000 par 1.0000 bd 0.2156
+Holm-adjusted exact p (clean40): cd 0.0838 ff 1.0000 st 0.1397 tt 1.0000 par 1.0000 bd 0.2395

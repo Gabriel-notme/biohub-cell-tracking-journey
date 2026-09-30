@@ -1,0 +1,45 @@
+P17 multi-check (09-28, P15 base)        unique variants  37 | delta median +0.00045  range [-0.00371, +0.00068] | #>0 31  #lo>0 25 | z>2: 5
+p16 divnet/linknet (09-28)               unique variants   3 | delta median -0.00520  range [-0.00541, +0.00004] | #>0 1  #lo>0 0 | z>2: 0
+p17/p18 (09-28)                          unique variants   1 | delta median +0.00531  range [+0.00531, +0.00531] | #>0 1  #lo>0 1 | z>2: 1
+p19 family agents (09-28, P17 base)      unique variants  35 | delta median +0.00000  range [-0.00030, +0.00039] | #>0 25  #lo>0 16 | z>2: 9
+p19r/p19s assembly (09-28)               unique variants  10 | delta median +0.00027  range [+0.00009, +0.00069] | #>0 10  #lo>0 10 | z>2: 10
+r2/r3/combo (09-26, P13/P14 base)        unique variants  50 | delta median +0.00018  range [-0.01075, +0.00192] | #>0 32  #lo>0 23 | z>2: 23
+r4/r5 (09-26 evening, P15 base)          unique variants  19 | delta median +0.00004  range [-0.01341, +0.00049] | #>0 13  #lo>0 5 | z>2: 2
+total unique variants (excluding check2 agents): 155
+
+p19 family agents detail (P17 base):
+  p16/p19/dup/eval1_rows.json              v1 d +0.00004 sd 0.00002 eval +0.00002 nodes  -1698 tp   -2 fp   -5
+  p16/p19/dup/eval1_rows.json              v2 d +0.00002 sd 0.00001 eval +0.00001 nodes   -383 tp   +1 fp   -1
+  p16/p19/dup/eval1_rows.json              v3 d +0.00000 sd 0.00000 eval +0.00000 nodes     +0 tp   +0 fp   +0
+  p16/p19/dup/eval1_rows.json              v4 d +0.00000 sd 0.00000 eval +0.00000 nodes   -126 tp   +0 fp   +0
+  p16/p19/dup/eval2_rows.json              v1 d +0.00002 sd 0.00001 eval +0.00001 nodes   -263 tp   +0 fp   -2
+  p16/p19/dup/eval2_rows.json              v2 d +0.00002 sd 0.00001 eval +0.00001 nodes   -494 tp   +1 fp   -1
+  p16/p19/dup/eval2_rows.json              v3 d +0.00004 sd 0.00002 eval +0.00003 nodes   -745 tp   +1 fp   -3
+  p16/p19/dup/eval3_rows.json              v1 d +0.00001 sd 0.00001 eval +0.00001 nodes   -383 tp   +0 fp   -1
+  p16/p19/dup/eval3_rows.json              v2 d +0.00003 sd 0.00001 eval +0.00002 nodes   -745 tp   +0 fp   -3
+  p16/p19/edge/run1_rows.json              v1 d +0.00000 sd 0.00000 eval +0.00000 nodes     -2 tp   +0 fp   +0
+  p16/p19/edge/run1_rows.json              v2 d +0.00004 sd 0.00004 eval -0.00002 nodes  -2380 tp   -4 fp   -1
+  p16/p19/edge/run1_rows.json              v3 d +0.00010 sd 0.00008 eval -0.00017 nodes -12040 tp  -29 fp   -6
+  p16/p19/edge/run1_rows.json              v4 d -0.00008 sd 0.00007 eval -0.00014 nodes  -3645 tp  -14 fp   +5
+  p16/p19/edge/run2_rows.json              v1 d -0.00002 sd 0.00003 eval -0.00004 nodes   -887 tp   -5 fp   +0
+  p16/p19/edge/run2_rows.json              v2 d +0.00006 sd 0.00002 eval +0.00001 nodes  -1489 tp   +1 fp   -1
+  p16/p19/edge/run2_rows.json              v4 d -0.00000 sd 0.00002 eval -0.00001 nodes   -370 tp   -1 fp   +0
+  p16/p19/edge/run2_rows.json              v5 d -0.00001 sd 0.00002 eval -0.00002 nodes   -102 tp   -3 fp   -1
+  p16/p19/edge/run2_rows.json              v6 d -0.00007 sd 0.00005 eval -0.00010 nodes   -731 tp  -11 fp   +2
+  p16/p19/fork/re_v1.json                  v1 d +0.00000 sd 0.00000 eval +0.00000 nodes    -28 tp   +0 fp   +0
+  p16/p19/fork/re_v1.json                  v2 d +0.00000 sd 0.00000 eval +0.00000 nodes    -14 tp   +0 fp   +0
+  p16/p19/fork/re_v1.json                  v3 d +0.00000 sd 0.00000 eval +0.00000 nodes    -37 tp   +0 fp   +0
+  p16/p19/fork/re_v1.json                  v4 d +0.00000 sd 0.00000 eval +0.00000 nodes     -9 tp   +0 fp   +0
+  p16/p19/frag/rows_run1.json              v1 d +0.00039 sd 0.00026 eval -0.00068 nodes -54614 tp -116 fp  -27
+  p16/p19/frag/rows_run1.json              v2 d +0.00038 sd 0.00027 eval -0.00056 nodes -47833 tp -102 fp  -29
+  p16/p19/frag/rows_run1.json              v3 d +0.00004 sd 0.00010 eval -0.00009 nodes  -6947 tp  -18 fp   -7
+  p16/p19/frag/rows_run1.json              v4 d +0.00005 sd 0.00010 eval -0.00006 nodes  -6552 tp  -15 fp   -7
+  p16/p19/frag/rows_run1.json              v5 d -0.00002 sd 0.00004 eval -0.00004 nodes   -744 tp   -2 fp   +3
+  p16/p19/frag/rows_run1.json              v6 d +0.00000 sd 0.00000 eval +0.00000 nodes    -46 tp   +0 fp   +0
+  p16/p19/frag/rows_run2_iso.json          v1 d +0.00000 sd 0.00000 eval +0.00000 nodes    -32 tp   +0 fp   +0
+  p16/p19/motion/re1_rows.json             v1 d -0.00013 sd 0.00005 eval -0.00014 nodes   -551 tp  -19 fp   -1
+  p16/p19/motion/re1_rows.json             v2 d -0.00030 sd 0.00015 eval -0.00030 nodes     +0 tp  -18 fp  +24
+  p16/p19/motion/re1_rows.json             v3 d -0.00017 sd 0.00004 eval -0.00017 nodes     +0 tp  -24 fp   -1
+  p16/p19/v_edge/sens_rows.json            v1 d +0.00005 sd 0.00002 eval +0.00001 nodes  -1015 tp   +1 fp   -1
+  p16/p19/v_edge/sens_rows.json            v2 d +0.00009 sd 0.00002 eval +0.00001 nodes  -2231 tp   +1 fp   -1
+  p16/p19/v_edge/sens_rows.json            v3 d +0.00009 sd 0.00003 eval -0.00002 nodes  -4153 tp   -5 fp   -2

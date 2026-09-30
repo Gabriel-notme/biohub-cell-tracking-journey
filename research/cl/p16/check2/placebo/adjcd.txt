@@ -1,0 +1,6 @@
+cd {'pieces': 653, 'adj_earlier': 0, 'adj_cd': 196, 'p15type_bridge': 653}
+ff {'pieces': 370, 'adj_earlier': 2, 'adj_cd': 2, 'p15type_whole': 368, 'p15type_head': 2}
+st {'pieces': 255, 'adj_earlier': 71, 'adj_cd': 71, 'p15type_head': 184, 'p15type_bridge': 71}
+tt {'pieces': 352, 'adj_earlier': 181, 'adj_cd': 181, 'p15type_tail': 171, 'p15type_bridge': 181}
+par {'pieces': 25, 'adj_earlier': 3, 'adj_cd': 0, 'p15type_whole': 3, 'p15type_head': 17, 'p15type_tail': 3, 'p15type_bridge': 2}
+bd {'pieces': 427, 'adj_earlier': 4, 'adj_cd': 1, 'p15type_whole': 423, 'p15type_tail': 3, 'p15type_head': 1}

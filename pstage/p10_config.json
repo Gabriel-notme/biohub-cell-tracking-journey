@@ -1,0 +1,34 @@
+{
+ "variant": "P10",
+ "models": [
+  "b1_best.pt"
+ ],
+ "event_config": {
+  "fork_ensemble": "first",
+  "edge_ensemble": "last"
+ },
+ "apply": {
+  "th_start": 0.9,
+  "th_stolen": 0.97,
+  "old_max": 1.0
+ },
+ "dfork": {
+  "K": 100
+ },
+ "relink": {
+  "th": 0.65,
+  "model": "relink_lgb.json"
+ },
+ "edge_link": {
+  "th": 0.4,
+  "gap2": true,
+  "model": "edge_lgb.json"
+ },
+ "post_prune": 2,
+ "junk_prune": {
+  "model": "jp_lgb.json",
+  "lam": 1.0,
+  "tp_ref": 633.0,
+  "ratio": 1.04304
+ }
+}

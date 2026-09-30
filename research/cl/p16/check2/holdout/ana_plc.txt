@@ -1,0 +1,17 @@
+movies 199
+
+== dup rule vs 20 placebo draws (random same-shape deletions)
+  all      obs +0.000031 (evaluable part +0.000021, node part +0.000010) | placebo mean -0.000032 sd 0.000033 max +0.000023, #>=obs 0/20 | placebo evaluable mean -0.000042 sd 0.000033, #>=obs 0
+  44b6     obs +0.000053 (evaluable part +0.000045, node part +0.000008) | placebo mean -0.000015 sd 0.000082 max +0.000285, #>=obs 1/20 | placebo evaluable mean -0.000023 sd 0.000082, #>=obs 1
+  6bba     obs +0.000027 (evaluable part +0.000017, node part +0.000010) | placebo mean -0.000035 sd 0.000040 max +0.000018, #>=obs 0/20 | placebo evaluable mean -0.000045 sd 0.000040, #>=obs 0
+  clean40  obs +0.000010 (evaluable part +0.000000, node part +0.000010) | placebo mean -0.000013 sd 0.000103 max +0.000226, #>=obs 12/20 | placebo evaluable mean -0.000023 sd 0.000103, #>=obs 12
+  counts (tp, fp, divtp, divfp, nodes): rule (0, -3, 0, 0, -526) | placebo [(-10, 2, 0, 0, -526), (-9, 0, 0, 0, -526), (-7, 2, 0, 0, -526), (-2, -4, 0, 0, -526), (-5, 0, 0, 0, -526), (-2, 0, 0, 0, -526), (-2, 0, 0, 0, -526), (-3, 0, 0, 0, -526), (-4, -1, 0, 0, -526), (-6, 0, 0, 0, -526), (-1, 0, 0, 0, -526), (-8, -3, 0, 0, -526), (-2, -2, 0, 0, -526), (-2, 2, 0, 0, -526), (-3, 2, 0, 0, -526), (-2, 0, 0, 0, -526), (-9, 1, 0, 0, -526), (-14, 2, 0, 0, -526), (-5, 1, 0, 0, -526), (-10, 3, 0, 0, -526)]
+
+== bd rule vs 20 placebo draws (random same-shape deletions)
+  all      obs +0.000061 (evaluable part +0.000014, node part +0.000047) | placebo mean -0.000007 sd 0.000025 max +0.000039, #>=obs 0/20 | placebo evaluable mean -0.000054 sd 0.000025, #>=obs 0
+  44b6     obs +0.000013 (evaluable part +0.000000, node part +0.000013) | placebo mean -0.000074 sd 0.000078 max +0.000013, #>=obs 4/20 | placebo evaluable mean -0.000087 sd 0.000078, #>=obs 4
+  6bba     obs +0.000070 (evaluable part +0.000017, node part +0.000053) | placebo mean +0.000005 sd 0.000025 max +0.000053, #>=obs 0/20 | placebo evaluable mean -0.000048 sd 0.000025, #>=obs 0
+  clean40  obs +0.000044 (evaluable part +0.000000, node part +0.000044) | placebo mean -0.000017 sd 0.000102 max +0.000170, #>=obs 1/20 | placebo evaluable mean -0.000057 sd 0.000102, #>=obs 13
+  counts (tp, fp, divtp, divfp, nodes): rule (1, -1, 0, 0, -1482) | placebo [(-11, 0, 0, 0, -1490), (-6, 0, 0, 0, -1488), (-4, 0, 0, 0, -1490), (-4, 2, 0, 0, -1490), (-7, 2, 0, 0, -1490), (-9, 0, 0, 0, -1488), (-8, -2, 0, 0, -1490), (-5, 4, 0, 0, -1490), (-4, -1, 0, 0, -1490), (-10, 0, 0, 0, -1490), (-3, 4, 0, 0, -1490), (-15, 2, 0, 0, -1490), (-4, 2, 0, 0, -1488), (-10, -2, 0, 0, -1486), (-8, 0, 0, 0, -1490), (-1, 0, 0, 0, -1490), (-5, 3, 0, 0, -1490), (-5, 4, 0, 0, -1488), (-4, -2, 0, 0, -1490), (-6, 0, 0, 0, -1488)]
+
+placebo shortfall (nodes not matched): dup 0 total over all draws; bd 180

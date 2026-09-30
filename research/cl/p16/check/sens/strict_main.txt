@@ -1,0 +1,153 @@
+== STRICT {} vi=1 PASS (failed: )
+  S1 ok   all +0.00060 CI [+0.00013, +0.00130]
+  S2 ok   44b6 +0.00152 P>0 1.000 | 6bba +0.00040 P>0 0.982
+  S3 ok   clean40 +0.00151 (44b6 +0.00126, 6bba +0.00151)
+  S4 ok   B5clean72 +0.00139 (44b6 +0.00205, 6bba +0.00106)
+  S5 ok   -hold36 +0.00020 -prev4 +0.00061 -audit32 +0.00059 -t127a +0.00079 -t127b +0.00082
+  S6 ok   drop top5 +0.00047 | 44b6 drop top3 +0.00120 | 6bba drop top3 +0.00030
+  S7 ok   up 165 down 3
+  S7b(info) movies with evaluable changes 17: score up 14 down 3 | edge-count net up 14 down 3
+== STRICT {"rad":2.5} vi=2 PASS (failed: )
+  S1 ok   all +0.00057 CI [+0.00010, +0.00128]
+  S2 ok   44b6 +0.00147 P>0 1.000 | 6bba +0.00037 P>0 0.978
+  S3 ok   clean40 +0.00151 (44b6 +0.00126, 6bba +0.00150)
+  S4 ok   B5clean72 +0.00134 (44b6 +0.00196, 6bba +0.00103)
+  S5 ok   -hold36 +0.00017 -prev4 +0.00058 -audit32 +0.00057 -t127a +0.00077 -t127b +0.00078
+  S6 ok   drop top5 +0.00025 | 44b6 drop top3 +0.00115 | 6bba drop top3 +0.00004
+  S7 ok   up 162 down 2
+  S7b(info) movies with evaluable changes 13: score up 11 down 2 | edge-count net up 11 down 2
+== STRICT {"rad":4.0} vi=3 FAIL (failed: S1,S2)
+  S1 XX   all +0.00042 CI [-0.00006, +0.00110]
+  S2 XX   44b6 +0.00092 P>0 0.850 | 6bba +0.00029 P>0 0.848
+  S3 ok   clean40 +0.00112 (44b6 -0.00031, 6bba +0.00151)
+  S4 ok   B5clean72 +0.00105 (44b6 +0.00107, 6bba +0.00094)
+  S5 ok   -hold36 +0.00006 -prev4 +0.00043 -audit32 +0.00042 -t127a +0.00052 -t127b +0.00065
+  S6 ok   drop top5 +0.00028 | 44b6 drop top3 +0.00056 | 6bba drop top3 +0.00019
+  S7 ok   up 160 down 9
+  S7b(info) movies with evaluable changes 22: score up 13 down 9 | edge-count net up 12 down 10
+== STRICT {"minlen":5} vi=4 FAIL (failed: S2)
+  S1 ok   all +0.00054 CI [+0.00007, +0.00124]
+  S2 XX   44b6 +0.00151 P>0 1.000 | 6bba +0.00034 P>0 0.948
+  S3 ok   clean40 +0.00150 (44b6 +0.00125, 6bba +0.00150)
+  S4 ok   B5clean72 +0.00138 (44b6 +0.00204, 6bba +0.00105)
+  S5 ok   -hold36 +0.00014 -prev4 +0.00056 -audit32 +0.00053 -t127a +0.00078 -t127b +0.00074
+  S6 ok   drop top5 +0.00024 | 44b6 drop top3 +0.00119 | 6bba drop top3 +0.00002
+  S7 ok   up 160 down 3
+  S7b(info) movies with evaluable changes 16: score up 13 down 3 | edge-count net up 13 down 3
+== STRICT {"minlen":7} vi=5 PASS (failed: )
+  S1 ok   all +0.00062 CI [+0.00014, +0.00132]
+  S2 ok   44b6 +0.00153 P>0 1.000 | 6bba +0.00042 P>0 0.992
+  S3 ok   clean40 +0.00153 (44b6 +0.00129, 6bba +0.00153)
+  S4 ok   B5clean72 +0.00141 (44b6 +0.00206, 6bba +0.00108)
+  S5 ok   -hold36 +0.00022 -prev4 +0.00063 -audit32 +0.00061 -t127a +0.00081 -t127b +0.00084
+  S6 ok   drop top5 +0.00049 | 44b6 drop top3 +0.00122 | 6bba drop top3 +0.00032
+  S7 ok   up 169 down 3
+  S7b(info) movies with evaluable changes 17: score up 14 down 3 | edge-count net up 14 down 3
+== STRICT {"maxk":1} vi=6 PASS (failed: )
+  S1 ok   all +0.00040 CI [+0.00009, +0.00097]
+  S2 ok   44b6 +0.00050 P>0 1.000 | 6bba +0.00039 P>0 0.980
+  S3 ok   clean40 +0.00089 (44b6 +0.00022, 6bba +0.00150)
+  S4 ok   B5clean72 +0.00085 (44b6 +0.00065, 6bba +0.00105)
+  S5 ok   -hold36 +0.00020 -prev4 +0.00041 -audit32 +0.00038 -t127a +0.00050 -t127b +0.00054
+  S6 ok   drop top5 +0.00027 | 44b6 drop top3 +0.00019 | 6bba drop top3 +0.00029
+  S7 ok   up 160 down 2
+  S7b(info) movies with evaluable changes 16: score up 14 down 2 | edge-count net up 14 down 2
+== STRICT {"maxk":3} vi=7 FAIL (failed: S1,S2,S4,S5,S6)
+  S1 XX   all -0.00137 CI [-0.00412, +0.00080]
+  S2 XX   44b6 +0.00281 P>0 1.000 | 6bba -0.00228 P>0 0.053
+  S3 ok   clean40 +0.00153 (44b6 +0.00128, 6bba +0.00153)
+  S4 XX   B5clean72 -0.00012 (44b6 +0.00206, 6bba -0.00122)
+  S5 XX   -hold36 -0.00239 -prev4 -0.00139 -audit32 -0.00102 -t127a +0.00021 -t127b -0.00219
+  S6 XX   drop top5 -0.00150 | 44b6 drop top3 +0.00150 | 6bba drop top3 -0.00239
+  S7 ok   up 167 down 8
+  S7b(info) movies with evaluable changes 23: score up 15 down 8 | edge-count net up 15 down 8
+== STRICT {"cd":0} vi=8 PASS (failed: )
+  S1 ok   all +0.00050 CI [+0.00005, +0.00119]
+  S2 ok   44b6 +0.00105 P>0 1.000 | 6bba +0.00037 P>0 1.000
+  S3 ok   clean40 +0.00142 (44b6 +0.00107, 6bba +0.00144)
+  S4 ok   B5clean72 +0.00118 (44b6 +0.00143, 6bba +0.00099)
+  S5 ok   -hold36 +0.00010 -prev4 +0.00051 -audit32 +0.00053 -t127a +0.00066 -t127b +0.00071
+  S6 ok   drop top5 +0.00023 | 44b6 drop top3 +0.00126 | 6bba drop top3 +0.00004
+  S7 ok   up 150 down 1
+  S7b(info) movies with evaluable changes 4: score up 3 down 1 | edge-count net up 3 down 1
+== STRICT {"ff":0} vi=9 FAIL (failed: S2,S6)
+  S1 ok   all +0.00052 CI [+0.00005, +0.00121]
+  S2 XX   44b6 +0.00150 P>0 1.000 | 6bba +0.00031 P>0 0.923
+  S3 ok   clean40 +0.00149 (44b6 +0.00123, 6bba +0.00149)
+  S4 ok   B5clean72 +0.00136 (44b6 +0.00202, 6bba +0.00104)
+  S5 ok   -hold36 +0.00011 -prev4 +0.00053 -audit32 +0.00050 -t127a +0.00075 -t127b +0.00073
+  S6 XX   drop top5 +0.00022 | 44b6 drop top3 +0.00118 | 6bba drop top3 -0.00001
+  S7 ok   up 147 down 3
+  S7b(info) movies with evaluable changes 15: score up 12 down 3 | edge-count net up 12 down 3
+== STRICT {"sb":0} vi=10 PASS (failed: )
+  S1 ok   all +0.00018 CI [+0.00005, +0.00033]
+  S2 ok   44b6 +0.00050 P>0 1.000 | 6bba +0.00012 P>0 0.957
+  S3 ok   clean40 +0.00012 (44b6 +0.00022, 6bba +0.00008)
+  S4 ok   B5clean72 +0.00024 (44b6 +0.00065, 6bba +0.00009)
+  S5 ok   -hold36 +0.00019 -prev4 +0.00018 -audit32 +0.00015 -t127a +0.00017 -t127b +0.00022
+  S6 ok   drop top5 +0.00005 | 44b6 drop top3 +0.00019 | 6bba drop top3 +0.00002
+  S7 ok   up 155 down 2
+  S7b(info) movies with evaluable changes 15: score up 13 down 2 | edge-count net up 13 down 2
+== STRICT {"rad":2.0} vi=11 PASS (failed: )
+  S1 ok   all +0.00056 CI [+0.00011, +0.00126]
+  S2 ok   44b6 +0.00124 P>0 1.000 | 6bba +0.00041 P>0 1.000
+  S3 ok   clean40 +0.00146 (44b6 +0.00108, 6bba +0.00150)
+  S4 ok   B5clean72 +0.00123 (44b6 +0.00152, 6bba +0.00103)
+  S5 ok   -hold36 +0.00016 -prev4 +0.00057 -audit32 +0.00059 -t127a +0.00071 -t127b +0.00076
+  S6 ok   drop top5 +0.00026 | 44b6 drop top3 +0.00102 | 6bba drop top3 +0.00007
+  S7 ok   up 163 down 1
+  S7b(info) movies with evaluable changes 10: score up 9 down 1 | edge-count net up 9 down 1
+== STRICT {"rad":5.0} vi=12 FAIL (failed: S1,S2,S5,S6)
+  S1 XX   all +0.00006 CI [-0.00048, +0.00076]
+  S2 XX   44b6 -0.00003 P>0 0.412 | 6bba +0.00005 P>0 0.533
+  S3 ok   clean40 +0.00027 (44b6 -0.00237, 6bba +0.00106)
+  S4 ok   B5clean72 +0.00043 (44b6 -0.00030, 6bba +0.00059)
+  S5 XX   -hold36 -0.00022 -prev4 +0.00010 -audit32 +0.00007 -t127a +0.00015 -t127b +0.00019
+  S6 XX   drop top5 -0.00029 | 44b6 drop top3 -0.00041 | 6bba drop top3 -0.00006
+  S7 ok   up 155 down 19
+  S7b(info) movies with evaluable changes 32: score up 13 down 19 | edge-count net up 12 down 20
+== STRICT {"minlen":4} vi=13 FAIL (failed: S2,S6)
+  S1 ok   all +0.00052 CI [+0.00006, +0.00122]
+  S2 XX   44b6 +0.00150 P>0 1.000 | 6bba +0.00031 P>0 0.925
+  S3 ok   clean40 +0.00149 (44b6 +0.00123, 6bba +0.00149)
+  S4 ok   B5clean72 +0.00137 (44b6 +0.00202, 6bba +0.00104)
+  S5 ok   -hold36 +0.00012 -prev4 +0.00054 -audit32 +0.00050 -t127a +0.00076 -t127b +0.00073
+  S6 XX   drop top5 +0.00022 | 44b6 drop top3 +0.00118 | 6bba drop top3 -0.00000
+  S7 ok   up 149 down 3
+  S7b(info) movies with evaluable changes 15: score up 12 down 3 | edge-count net up 12 down 3
+== STRICT {"minlen":8} vi=14 PASS (failed: )
+  S1 ok   all +0.00068 CI [+0.00019, +0.00138]
+  S2 ok   44b6 +0.00155 P>0 1.000 | 6bba +0.00049 P>0 1.000
+  S3 ok   clean40 +0.00155 (44b6 +0.00131, 6bba +0.00154)
+  S4 ok   B5clean72 +0.00142 (44b6 +0.00208, 6bba +0.00110)
+  S5 ok   -hold36 +0.00029 -prev4 +0.00069 -audit32 +0.00068 -t127a +0.00083 -t127b +0.00092
+  S6 ok   drop top5 +0.00052 | 44b6 drop top3 +0.00123 | 6bba drop top3 +0.00035
+  S7 ok   up 171 down 3
+  S7b(info) movies with evaluable changes 18: score up 15 down 3 | edge-count net up 15 down 3
+== STRICT {"minlen":10} vi=15 FAIL (failed: S2)
+  S1 ok   all +0.00058 CI [+0.00008, +0.00131]
+  S2 XX   44b6 +0.00152 P>0 1.000 | 6bba +0.00038 P>0 0.925
+  S3 ok   clean40 +0.00158 (44b6 +0.00135, 6bba +0.00157)
+  S4 ok   B5clean72 +0.00125 (44b6 +0.00211, 6bba +0.00086)
+  S5 ok   -hold36 +0.00017 -prev4 +0.00059 -audit32 +0.00063 -t127a +0.00065 -t127b +0.00087
+  S6 ok   drop top5 +0.00042 | 44b6 drop top3 +0.00120 | 6bba drop top3 +0.00024
+  S7 ok   up 172 down 6
+  S7b(info) movies with evaluable changes 20: score up 14 down 6 | edge-count net up 14 down 6
+== STRICT {"maxk":0} vi=16 PASS (failed: )
+  S1 ok   all +0.00018 CI [+0.00005, +0.00033]
+  S2 ok   44b6 +0.00050 P>0 1.000 | 6bba +0.00012 P>0 0.957
+  S3 ok   clean40 +0.00012 (44b6 +0.00022, 6bba +0.00008)
+  S4 ok   B5clean72 +0.00024 (44b6 +0.00065, 6bba +0.00009)
+  S5 ok   -hold36 +0.00019 -prev4 +0.00018 -audit32 +0.00015 -t127a +0.00017 -t127b +0.00022
+  S6 ok   drop top5 +0.00005 | 44b6 drop top3 +0.00019 | 6bba drop top3 +0.00002
+  S7 ok   up 156 down 2
+  S7b(info) movies with evaluable changes 15: score up 13 down 2 | edge-count net up 13 down 2
+== STRICT {"maxk":4} vi=17 FAIL (failed: S1,S2,S3,S4,S5,S6)
+  S1 XX   all -0.00371 CI [-0.00710, -0.00057]
+  S2 XX   44b6 -0.00372 P>0 0.198 | 6bba -0.00370 P>0 0.017
+  S3 XX   clean40 -0.00298 (44b6 -0.00417, 6bba -0.00232)
+  S4 XX   B5clean72 -0.00456 (44b6 -0.00219, 6bba -0.00576)
+  S5 XX   -hold36 -0.00393 -prev4 -0.00380 -audit32 -0.00306 -t127a -0.00325 -t127b -0.00464
+  S6 XX   drop top5 -0.00395 | 44b6 drop top3 -0.00547 | 6bba drop top3 -0.00394
+  S7 ok   up 169 down 12
+  S7b(info) movies with evaluable changes 28: score up 16 down 12 | edge-count net up 16 down 12

@@ -1,0 +1,9 @@
+== STRICT v5 vi=5 PASS (failed: )
+  S1 ok   all +0.00050 CI [+0.00005, +0.00119]
+  S2 ok   44b6 +0.00105 P>0 1.000 | 6bba +0.00037 P>0 1.000
+  S3 ok   clean40 +0.00142 (44b6 +0.00107, 6bba +0.00144)
+  S4 ok   B5clean72 +0.00118 (44b6 +0.00143, 6bba +0.00099)
+  S5 ok   -hold36 +0.00010 -prev4 +0.00051 -audit32 +0.00053 -t127a +0.00066 -t127b +0.00071
+  S6 ok   drop top5 +0.00023 | 44b6 drop top3 +0.00126 | 6bba drop top3 +0.00004
+  S7 ok   up 150 down 1
+  S7b(info) movies with evaluable changes 4: score up 3 down 1 | edge-count net up 3 down 1

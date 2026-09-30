@@ -1,0 +1,211 @@
+{
+  "passed": false,
+  "created_unix": 1790199397.0053635,
+  "audit_reused": true,
+  "initial_audit_passed": false,
+  "second_audit_passed": false,
+  "initial_failed_audit_file": "initial_release_acceptance_b56.json",
+  "audit": {
+    "B5": {
+      "summary": {
+        "n": 32,
+        "edge_jaccard": 0.9155207255162896,
+        "division_jaccard": 0.34782608695652173,
+        "division_tp": 8,
+        "division_fp": 2,
+        "division_fn": 13,
+        "node_recall": 0.9822215850761787,
+        "adj_edge_jaccard": 0.9194909242004895,
+        "n_adj": 32,
+        "score": 0.9542735328961417
+      },
+      "delta": 0.003059117356607688,
+      "paired_interval": [
+        -0.0020773417754917033,
+        0.0027964723937015656,
+        0.011278206396663187
+      ],
+      "by_embryo": {
+        "44b6": {
+          "candidate": {
+            "n": 16,
+            "edge_jaccard": 0.913689936536718,
+            "division_jaccard": 0.4,
+            "division_tp": 2,
+            "division_fp": 0,
+            "division_fn": 3,
+            "node_recall": 0.9838841933817224,
+            "adj_edge_jaccard": 0.9281846806112831,
+            "n_adj": 16,
+            "score": 0.9681846806112832
+          },
+          "B4": {
+            "n": 16,
+            "edge_jaccard": 0.9145391997103024,
+            "division_jaccard": 0.4,
+            "division_tp": 2,
+            "division_fp": 0,
+            "division_fn": 3,
+            "node_recall": 0.9838841933817224,
+            "adj_edge_jaccard": 0.9290027472946477,
+            "n_adj": 16,
+            "score": 0.9690027472946477
+          }
+        },
+        "6bba": {
+          "candidate": {
+            "n": 16,
+            "edge_jaccard": 0.916204142412346,
+            "division_jaccard": 0.3333333333333333,
+            "division_tp": 6,
+            "division_fp": 2,
+            "division_fn": 10,
+            "node_recall": 0.9805589767706352,
+            "adj_edge_jaccard": 0.9162456239022948,
+            "n_adj": 16,
+            "score": 0.9495789572356281
+          },
+          "B4": {
+            "n": 16,
+            "edge_jaccard": 0.9176812770562771,
+            "division_jaccard": 0.2777777777777778,
+            "division_tp": 5,
+            "division_fp": 2,
+            "division_fn": 11,
+            "node_recall": 0.9805589767706352,
+            "adj_edge_jaccard": 0.9177076456045857,
+            "n_adj": 16,
+            "score": 0.9454854233823635
+          }
+        }
+      },
+      "checks": {
+        "all_32_movies": true,
+        "beats_B3": true,
+        "beats_B4": true,
+        "edge_noninferiority": false,
+        "node_recall_preserved": true,
+        "no_material_embryo_regression": true,
+        "paired_lower_bound": true,
+        "no_solver_fallback": true
+      },
+      "passed": false
+    },
+    "B6": {
+      "summary": {
+        "n": 32,
+        "edge_jaccard": 0.9154304864225519,
+        "division_jaccard": 0.34782608695652173,
+        "division_tp": 8,
+        "division_fp": 2,
+        "division_fn": 13,
+        "node_recall": 0.9822215850761787,
+        "adj_edge_jaccard": 0.9194001443791365,
+        "n_adj": 32,
+        "score": 0.9541827530747887
+      },
+      "delta": 0.002968337535254717,
+      "paired_interval": [
+        -0.002141739581479321,
+        0.0027538446168298703,
+        0.011156853212401915
+      ],
+      "by_embryo": {
+        "44b6": {
+          "candidate": {
+            "n": 16,
+            "edge_jaccard": 0.913689936536718,
+            "division_jaccard": 0.4,
+            "division_tp": 2,
+            "division_fp": 0,
+            "division_fn": 3,
+            "node_recall": 0.9838841933817224,
+            "adj_edge_jaccard": 0.9281846806112831,
+            "n_adj": 16,
+            "score": 0.9681846806112832
+          },
+          "B4": {
+            "n": 16,
+            "edge_jaccard": 0.9145391997103024,
+            "division_jaccard": 0.4,
+            "division_tp": 2,
+            "division_fp": 0,
+            "division_fn": 3,
+            "node_recall": 0.9838841933817224,
+            "adj_edge_jaccard": 0.9290027472946477,
+            "n_adj": 16,
+            "score": 0.9690027472946477
+          }
+        },
+        "6bba": {
+          "candidate": {
+            "n": 16,
+            "edge_jaccard": 0.916080129940444,
+            "division_jaccard": 0.3333333333333333,
+            "division_tp": 6,
+            "division_fp": 2,
+            "division_fn": 10,
+            "node_recall": 0.9805589767706352,
+            "adj_edge_jaccard": 0.9161214006514505,
+            "n_adj": 16,
+            "score": 0.9494547339847839
+          },
+          "B4": {
+            "n": 16,
+            "edge_jaccard": 0.9176812770562771,
+            "division_jaccard": 0.2777777777777778,
+            "division_tp": 5,
+            "division_fp": 2,
+            "division_fn": 11,
+            "node_recall": 0.9805589767706352,
+            "adj_edge_jaccard": 0.9177076456045857,
+            "n_adj": 16,
+            "score": 0.9454854233823635
+          }
+        }
+      },
+      "checks": {
+        "all_32_movies": true,
+        "beats_B3": true,
+        "beats_B4": true,
+        "edge_noninferiority": false,
+        "node_recall_preserved": true,
+        "no_material_embryo_regression": true,
+        "paired_lower_bound": true,
+        "no_solver_fallback": true
+      },
+      "passed": false
+    }
+  },
+  "baseline": {
+    "B3": {
+      "n": 32,
+      "edge_jaccard": 0.9149229481561715,
+      "division_jaccard": 0.34782608695652173,
+      "division_tp": 8,
+      "division_fp": 2,
+      "division_fn": 13,
+      "node_recall": 0.9822215850761787,
+      "adj_edge_jaccard": 0.9188820718216159,
+      "n_adj": 32,
+      "score": 0.953664680517268
+    },
+    "B4": {
+      "n": 32,
+      "edge_jaccard": 0.9168267100014773,
+      "division_jaccard": 0.30434782608695654,
+      "division_tp": 7,
+      "division_fp": 2,
+      "division_fn": 14,
+      "node_recall": 0.9822215850761787,
+      "adj_edge_jaccard": 0.9207796329308383,
+      "n_adj": 32,
+      "score": 0.951214415539534
+    }
+  },
+  "frozen_selection_sha256": "06c3bd8105c9ffec5887f1192c92b6f92f1811b4305c28638540cae9aa8005e8",
+  "leaderboard_target": 0.99,
+  "leaderboard_target_verified": false,
+  "actual_score_not_monitored": true,
+  "limitations": "This is a post-audit baseline revision: the initial B4-based candidates failed. Audit results informed the switch to B3 and then addition of the fixed visual link review, so the repeated 32-movie comparison is exploratory and is NOT independent validation. Original failed audit evidence is retained. Calibration is exploratory after candidate comparisons. New model fitting excludes these 32 audit movies, but inherited B3/B4 and public detector pretraining overlaps them. Fixed encoder features were precomputed without labels, scores or candidate-head inference to shorten the frozen audit. This is not fully out-of-fold validation of the entire pipeline. No leaderboard score is inferred from calibration."
+}

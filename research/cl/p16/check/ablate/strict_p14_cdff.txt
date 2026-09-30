@@ -1,0 +1,9 @@
+== STRICT cdff_on_P14 vi=3 FAIL (failed: S2,S6)
+  S1 ok   all +0.00017 CI [+0.00002, +0.00035]
+  S2 XX   44b6 +0.00050 P>0 1.000 | 6bba +0.00011 P>0 0.878
+  S3 ok   clean40 +0.00012 (44b6 +0.00022, 6bba +0.00008)
+  S4 ok   B5clean72 +0.00024 (44b6 +0.00064, 6bba +0.00009)
+  S5 ok   -hold36 +0.00018 -prev4 +0.00018 -audit32 +0.00014 -t127a +0.00013 -t127b +0.00025
+  S6 XX   drop top5 +0.00002 | 44b6 drop top3 +0.00019 | 6bba drop top3 -0.00002
+  S7 ok   up 154 down 3
+  S7b(info) movies with evaluable changes 16: score up 13 down 3 | edge-count net up 13 down 3

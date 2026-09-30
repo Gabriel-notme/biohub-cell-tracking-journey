@@ -1,0 +1,28 @@
+NB sel 44b6->6bba          cd=3.2 ff=7 st=2.5 tt=4.0 par=4.0 bm=3.0 bl=7
+   exact   : all +0.000427 44b6 +0.000793 6bba +0.000359 clean40 +0.000023 t127ab +0.000526 audit32 +0.000427 | tp -4 fp -28 nodes -11739
+   additive: all +0.000403 44b6 +0.000775 6bba +0.000334 clean40 -0.000014 t127ab +0.000504 audit32 +0.000409
+      44b6     exact +0.000793  movie-bootstrap CI [+0.000189, +0.001577] P>0 1.000
+      6bba     exact +0.000359  movie-bootstrap CI [+0.000188, +0.000557] P>0 1.000
+      clean40  exact +0.000023  movie-bootstrap CI [-0.000523, +0.000377] P>0 0.550
+      t127ab   exact +0.000526  movie-bootstrap CI [+0.000308, +0.000785] P>0 1.000
+NB sel 6bba->44b6          cd=3.2 ff=7 st=3.0 tt=4.0 par=3.5 bm=3.0 bl=7
+   exact   : all +0.000443 44b6 +0.000701 6bba +0.000395 clean40 +0.000114 t127ab +0.000526 audit32 +0.000429 | tp -1 fp -27 nodes -11772
+   additive: all +0.000410 44b6 +0.000681 6bba +0.000360 clean40 +0.000076 t127ab +0.000493 audit32 +0.000407
+      44b6     exact +0.000701  movie-bootstrap CI [+0.000010, +0.001520] P>0 0.975
+      6bba     exact +0.000395  movie-bootstrap CI [+0.000215, +0.000587] P>0 1.000
+      clean40  exact +0.000114  movie-bootstrap CI [-0.000233, +0.000420] P>0 0.775
+      t127ab   exact +0.000526  movie-bootstrap CI [+0.000332, +0.000781] P>0 1.000
+NB sel t127ab->clean40     cd=3.2 ff=7 st=3.0 tt=4.0 par=4.0 bm=3.0 bl=7
+   exact   : all +0.000415 44b6 +0.000706 6bba +0.000361 clean40 -0.000063 t127ab +0.000529 audit32 +0.000430 | tp -5 fp -27 nodes -11978
+   additive: all +0.000392 44b6 +0.000688 6bba +0.000337 clean40 -0.000098 t127ab +0.000507 audit32 +0.000413
+      44b6     exact +0.000706  movie-bootstrap CI [+0.000002, +0.001408] P>0 0.975
+      6bba     exact +0.000361  movie-bootstrap CI [+0.000179, +0.000554] P>0 1.000
+      clean40  exact -0.000063  movie-bootstrap CI [-0.000617, +0.000355] P>0 0.417
+      t127ab   exact +0.000529  movie-bootstrap CI [+0.000310, +0.000780] P>0 1.000
+NB sel clean40->t127ab     cd=3.2 ff=7 st=2.5 tt=3.5 par=3.5 bm=3.0 bl=7
+   exact   : all +0.000418 44b6 +0.000644 6bba +0.000376 clean40 +0.000341 t127ab +0.000390 audit32 +0.000626 | tp +2 fp -25 nodes -9393
+   additive: all +0.000385 44b6 +0.000624 6bba +0.000341 clean40 +0.000302 t127ab +0.000357 audit32 +0.000603
+      44b6     exact +0.000644  movie-bootstrap CI [+0.000289, +0.001131] P>0 1.000
+      6bba     exact +0.000376  movie-bootstrap CI [+0.000229, +0.000532] P>0 1.000
+      clean40  exact +0.000341  movie-bootstrap CI [+0.000211, +0.000518] P>0 1.000
+      t127ab   exact +0.000390  movie-bootstrap CI [+0.000203, +0.000593] P>0 1.000

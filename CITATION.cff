@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this code or write-up, please cite it as below. My code is MIT; the third-party-derived files listed in THIRD_PARTY_NOTICES.md are Apache-2.0."
+title: "Biohub Cell Tracking: a post-lineage correction stage and a public/private leaderboard post-mortem"
+authors:
+  - given-names: Gabriel
+    alias: Gabriel-notme
+type: software
+license: MIT
+repository-code: "https://github.com/Gabriel-notme/biohub-cell-tracking-journey"
+date-released: 2026-09-30
+keywords:
+  - cell tracking
+  - lineage reconstruction
+  - light-sheet microscopy
+  - zebrafish
+  - kaggle

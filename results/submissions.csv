@@ -1,0 +1,32 @@
+model,kaggle_title,version,family,change_vs_parent,public_lb,private_lb,final_selection
+v13,Biohub Precision Detector v13,1,early,dual-seed detection + trained motion/division classifiers,0.938,,no
+v14,Biohub Eight Movie Confirmation v14,1,early,full-movie post-processing comparison,0.943,,no
+v24,Biohub Temporal Brightness Final v24,1,early,geometry + multi-frame brightness classifiers (CPU run timed out),,,no
+v24-fix,Biohub Temporal Brightness Final v24,3,early,same model forced onto 2x T4,0.940,0.914,no
+B1,Biohub B1 Learned Cell Events,1,lineage,rebuilt on the public 0.947 baseline + 3-frame residual 3D event model,0.961,0.924,no
+B2,Biohub B2 Temporal Lineage Model,1,lineage,B1 with 5-frame pretrained U-Net event features,0.961,0.924,no
+B3,Biohub B3 Temporal Lineage,1,lineage,learned division review + rotation-invariant motion association + verified 7-frame recovery + centre refinement,0.965,0.928,no
+B4,Biohub B4 Temporal Lineage,2,lineage,B3 with image-embedding + motion visual association,0.965,0.928,no
+B5,Biohub B5 Track Video Lineage,1,lineage,B3 + division-preserving B4 visual review + track-video set attention + 3-seed LambdaRank consensus,0.965,0.928,no
+B6,Biohub B6 Track Video Lineage,1,lineage,B5 without the set-attention heads,0.965,0.928,no
+P1,Biohub P1 Division Completion,1,pstage,B5 + b1 division completion (start >= 0.90; stolen >= 0.97) + isolated-node prune,0.971,0.934,no
+P2,Biohub P2 Division Completion,2,pstage,B5 + start-type division completion only,0.970,0.935,no
+P3,Biohub P3 Sister Recovery,2,pstage,P1 + dropped-sister recovery (DSR th 0.98) + double-fork resolution K=2,0.972,0.939,no
+P4,Biohub P4 Sister Recovery Robust,2,pstage,P1 + double-fork resolution K=2 (no DSR),0.974,0.935,no
+P5,Biohub P5 Edge Linking,1,pstage,P3 + learned relinking + learned free-end linking,0.972,0.939,no
+P6,Biohub P6 Robust Edge Linking,1,pstage,P4 + learned relinking + learned free-end linking,0.975,0.935,no
+P7,Biohub P7 Link Before Prune,1,pstage,P5 with isolated-node pruning moved after linking,0.972,0.939,no
+P11,Biohub P11 Robust Whole Movie Dfork,1,pstage,P6 + prune-after-link + whole-movie double-fork resolution K=100,0.975,0.935,no
+P13,Biohub P13 Robust Dfork K35,1,pstage,P11 with K=35 (identical output on all 199 labelled movies),0.975,0.935,no
+P14,Biohub P14 Trim Longlink,1,pstage,P13 + term_trim + long_link,0.975,0.935,no
+P15,Biohub P15 Relinefit,2,pstage,P14 + tbext + relinefit,0.975,0.936,no
+P16a,Biohub P16a DivNet Blend,1,pstage,P15 + DivNet/b1 blended re-ranking of division candidates,0.973,0.932,no
+P16b,Biohub P16b DivNet Rerank,1,pstage,P15 + DivNet-only re-ranking of division candidates,0.967,0.932,no
+P17,Biohub P17 Structure Cleanup,1,pstage,P15 + cutdup + forkfrag + shortbranch deletion,0.974,0.937,no
+P18,Biohub P18 Cleanup DivNet,1,pstage,P17 + P16a DivNet blend,0.972,0.933,no
+P20,Biohub P20 Robust Cleanup,1,pstage,P15 + robust deletion-only clean-up (no shortbranch),0.975,0.936,yes
+P21,Biohub P21 Start Th085,1,pstage,P20 with start-type division threshold 0.85,0.976,0.937,yes
+P22A,Biohub P22A Jump Relink,1,pstage,P20 + global-jump compensated relinking,0.975,0.936,no
+P22B,Biohub P22B P21 Jump Relink,1,pstage,P21 + global-jump compensated relinking,0.976,0.937,no
+P23C,Biohub P23C P21 Start080,1,pstage,P21 with start-type division threshold 0.80,0.975,0.938,no
+P23D,Biohub P23D P21 Start0825,1,pstage,P21 with start-type division threshold 0.825,0.976,0.937,no

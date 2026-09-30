@@ -1,0 +1,38 @@
+{
+ "variant": "P14",
+ "models": [
+  "b1_best.pt"
+ ],
+ "event_config": {
+  "fork_ensemble": "first",
+  "edge_ensemble": "last"
+ },
+ "apply": {
+  "th_start": 0.9,
+  "th_stolen": 0.97,
+  "old_max": 1.0
+ },
+ "dfork": {
+  "K": 35
+ },
+ "relink": {
+  "th": 0.65,
+  "model": "relink_lgb.json"
+ },
+ "edge_link": {
+  "th": 0.4,
+  "gap2": true,
+  "model": "edge_lgb.json"
+ },
+ "post_prune": 2,
+ "term_trim": {
+  "r": 3.5,
+  "minlen": 3,
+  "iters": 5,
+  "join": "keep_end"
+ },
+ "long_link": {
+  "fe_min": 0.5,
+  "min_um": 14.0
+ }
+}

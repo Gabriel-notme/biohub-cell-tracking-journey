@@ -1,0 +1,26 @@
+movies 199
+eq_deployed 199 exact 199 edges_subset 199
+R0 nodes total 326825 of 4129973
+claimed rows vi1 == my p19_full: 199 | vi0 == my p15_full: 199
+
+cd: nodes 849 pieces 653 types {('bridge', False): 652, ('bridge', True): 1} sizes {1: 457, 2: 196} | pieces in R0 54 (nodes 75, matchable nodes 27) | movies with removal 127
+  alone on P15: all +0.000101 44b6 +0.000474 6bba +0.000032 clean40 +0.000096 | counts {'edge_tp': -1, 'edge_fp': -14, 'edge_fn': 1, 'division_tp': 0, 'division_fp': 0, 'division_fn': 0, 'num_pred_nodes': -849}
+
+ff: nodes 1553 pieces 370 types {('whole', False): 370} sizes {2: 25, 3: 27, 4: 168, 5: 150} | pieces in R0 14 (nodes 62, matchable nodes 32) | movies with removal 126
+  alone on P15: all +0.000080 44b6 +0.000026 6bba +0.000091 clean40 +0.000021 | counts {'edge_tp': 2, 'edge_fp': -5, 'edge_fn': -2, 'division_tp': 0, 'division_fp': 0, 'division_fn': 0, 'num_pred_nodes': -1553}
+
+st: nodes 263 pieces 255 types {('head', False): 255} sizes {1: 247, 2: 8} | pieces in R0 20 (nodes 22, matchable nodes 12) | movies with removal 97
+  alone on P15: all +0.000039 44b6 +0.000140 6bba +0.000020 clean40 +0.000046 | counts {'edge_tp': 0, 'edge_fp': -5, 'edge_fn': 0, 'division_tp': 0, 'division_fp': 0, 'division_fn': 0, 'num_pred_nodes': -263}
+
+tt: nodes 384 pieces 352 types {('tail', False): 352} sizes {1: 326, 2: 23, 3: 1, 4: 1, 5: 1} | pieces in R0 21 (nodes 22, matchable nodes 11) | movies with removal 113
+  alone on P15: all -0.000061 44b6 -0.000089 6bba -0.000056 clean40 +0.000005 | counts {'edge_tp': -6, 'edge_fp': 3, 'edge_fn': 6, 'division_tp': 0, 'division_fp': 0, 'division_fn': 0, 'num_pred_nodes': -384}
+
+par: nodes 99 pieces 25 types {('whole', False): 4, ('head', False): 18, ('tail', False): 3} sizes {3: 11, 4: 8, 5: 2, 6: 4} | pieces in R0 3 (nodes 11, matchable nodes 7) | movies with removal 19
+  alone on P15: all +0.000003 44b6 +0.000000 6bba +0.000004 clean40 +0.000004 | counts {'edge_tp': 0, 'edge_fp': 0, 'edge_fn': 0, 'division_tp': 0, 'division_fp': 0, 'division_fn': 0, 'num_pred_nodes': -99}
+
+bd: nodes 1496 pieces 427 types {('whole', False): 427} sizes {2: 128, 3: 51, 4: 153, 5: 95} | pieces in R0 2 (nodes 8, matchable nodes 3) | movies with removal 120
+  alone on P15: all +0.000061 44b6 +0.000013 6bba +0.000070 clean40 +0.000045 | counts {'edge_tp': 1, 'edge_fp': -1, 'edge_fn': -1, 'division_tp': 0, 'division_fp': 0, 'division_fn': 0, 'num_pred_nodes': -1496}
+
+P19-R (all families) vs P15: all +0.000276 44b6 +0.000573 6bba +0.000221 clean40 +0.000175 | counts 
+  counts {'edge_tp': 2, 'edge_fp': -23, 'edge_fn': -2, 'division_tp': 0, 'division_fp': 0, 'division_fn': 0, 'num_pred_nodes': -4644}
+timing mean {'rules': 2.222633882982647, 'red2': 0.24766505543311038, 'fam6': 0.6819202756162864, 'full2': 0.9092449878328409}

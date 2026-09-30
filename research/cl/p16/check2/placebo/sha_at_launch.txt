@@ -1,0 +1,9 @@
+2412dcd52bfedb3720e635fb9f706c134d8058a6  lib.py
+879371cc39791cfd2db1adcdf49904718ddfb7b3  plc2.py
+1eea4a013ceb4cbf7432468845b6079f07e64581  char.py
+a0d79899cb2e74abf11dcd3e0049d1a9642e5e5d  /workspace/cl/ideas/p19r.py
+fd59a98de0e356e27ce125e360931e3a2f906949  /workspace/cl/ideas/p19_dup.py
+4a7a260ad98ef37ac9c4780e238f21920ee51ca2  /workspace/cl/ideas/p19_edge_deploy.py
+7ce86f8e4ed102ac52ef1f009e570c2deca23778  /workspace/cl/p16/deploy/p17_post.py
+b170df9b8dbe729cf0a7c2edeab569bf778ab161  /workspace/p12ds/p14_post.py
+728d67caf389060052df53ae064410b27ef0131d  plc3.py

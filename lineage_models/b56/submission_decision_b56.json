@@ -1,0 +1,281 @@
+{
+  "created_unix": 1790199884.5949998,
+  "variants": {
+    "B5": {
+      "submit": true,
+      "original_auxiliary_gate_passed": false,
+      "failed_auxiliary_checks": [
+        "edge_noninferiority"
+      ],
+      "official_metric_improves_all_three_movie_groups": true,
+      "node_recall_preserved": true,
+      "evidence": {
+        "calibration": {
+          "candidate": {
+            "n": 18,
+            "edge_jaccard": 0.9352816528341868,
+            "division_jaccard": 0.43478260869565216,
+            "division_tp": 10,
+            "division_fp": 4,
+            "division_fn": 9,
+            "node_recall": 0.9902781025382195,
+            "adj_edge_jaccard": 0.9398254243253156,
+            "n_adj": 18,
+            "score": 0.9833036851948808
+          },
+          "references": {
+            "B3": {
+              "n": 18,
+              "edge_jaccard": 0.9343033509700176,
+              "division_jaccard": 0.43478260869565216,
+              "division_tp": 10,
+              "division_fp": 4,
+              "division_fn": 9,
+              "node_recall": 0.9902781025382195,
+              "adj_edge_jaccard": 0.9388449943330605,
+              "n_adj": 18,
+              "score": 0.9823232552026256
+            },
+            "B4": {
+              "n": 18,
+              "edge_jaccard": 0.9344031035090813,
+              "division_jaccard": 0.43478260869565216,
+              "division_tp": 10,
+              "division_fp": 4,
+              "division_fn": 9,
+              "node_recall": 0.9902781025382195,
+              "adj_edge_jaccard": 0.938942586635458,
+              "n_adj": 18,
+              "score": 0.9824208475050232
+            }
+          },
+          "report_sha256": "7785bfe1d68d57544e7668a7f8dfadea18bafc759ec556a5ab4b16cf58781936"
+        },
+        "new_audit": {
+          "candidate": {
+            "n": 32,
+            "edge_jaccard": 0.9155207255162896,
+            "division_jaccard": 0.34782608695652173,
+            "division_tp": 8,
+            "division_fp": 2,
+            "division_fn": 13,
+            "node_recall": 0.9822215850761787,
+            "adj_edge_jaccard": 0.9194909242004895,
+            "n_adj": 32,
+            "score": 0.9542735328961417
+          },
+          "references": {
+            "B3": {
+              "n": 32,
+              "edge_jaccard": 0.9149229481561715,
+              "division_jaccard": 0.34782608695652173,
+              "division_tp": 8,
+              "division_fp": 2,
+              "division_fn": 13,
+              "node_recall": 0.9822215850761787,
+              "adj_edge_jaccard": 0.9188820718216159,
+              "n_adj": 32,
+              "score": 0.953664680517268
+            },
+            "B4": {
+              "n": 32,
+              "edge_jaccard": 0.9168267100014773,
+              "division_jaccard": 0.30434782608695654,
+              "division_tp": 7,
+              "division_fp": 2,
+              "division_fn": 14,
+              "node_recall": 0.9822215850761787,
+              "adj_edge_jaccard": 0.9207796329308383,
+              "n_adj": 32,
+              "score": 0.951214415539534
+            }
+          },
+          "report_sha256": "b0cff8d85bb20a888a6fdfc3ae915396fddfd66e752c05b4b2456f16e6d611df"
+        },
+        "audit": {
+          "candidate": {
+            "n": 18,
+            "edge_jaccard": 0.9382465629930133,
+            "division_jaccard": 0.1,
+            "division_tp": 2,
+            "division_fp": 3,
+            "division_fn": 15,
+            "node_recall": 0.9866475511375609,
+            "adj_edge_jaccard": 0.9436008716723723,
+            "n_adj": 18,
+            "score": 0.9536008716723723
+          },
+          "references": {
+            "B3": {
+              "n": 18,
+              "edge_jaccard": 0.9370778928410626,
+              "division_jaccard": 0.1,
+              "division_tp": 2,
+              "division_fp": 3,
+              "division_fn": 15,
+              "node_recall": 0.9866475511375609,
+              "adj_edge_jaccard": 0.9424240201494792,
+              "n_adj": 18,
+              "score": 0.9524240201494792
+            },
+            "B4": {
+              "n": 18,
+              "edge_jaccard": 0.9374226223972988,
+              "division_jaccard": 0.1,
+              "division_tp": 2,
+              "division_fp": 3,
+              "division_fn": 15,
+              "node_recall": 0.9866475511375609,
+              "adj_edge_jaccard": 0.942768646218218,
+              "n_adj": 18,
+              "score": 0.952768646218218
+            }
+          },
+          "report_sha256": "665b2caae6aed2bfcd54d609a33871677cded18d1e04fa436cfc5da27606eeb8"
+        }
+      }
+    },
+    "B6": {
+      "submit": true,
+      "original_auxiliary_gate_passed": false,
+      "failed_auxiliary_checks": [
+        "edge_noninferiority"
+      ],
+      "official_metric_improves_all_three_movie_groups": true,
+      "node_recall_preserved": true,
+      "evidence": {
+        "calibration": {
+          "candidate": {
+            "n": 18,
+            "edge_jaccard": 0.9352816528341868,
+            "division_jaccard": 0.43478260869565216,
+            "division_tp": 10,
+            "division_fp": 4,
+            "division_fn": 9,
+            "node_recall": 0.9902781025382195,
+            "adj_edge_jaccard": 0.9398254243253156,
+            "n_adj": 18,
+            "score": 0.9833036851948808
+          },
+          "references": {
+            "B3": {
+              "n": 18,
+              "edge_jaccard": 0.9343033509700176,
+              "division_jaccard": 0.43478260869565216,
+              "division_tp": 10,
+              "division_fp": 4,
+              "division_fn": 9,
+              "node_recall": 0.9902781025382195,
+              "adj_edge_jaccard": 0.9388449943330605,
+              "n_adj": 18,
+              "score": 0.9823232552026256
+            },
+            "B4": {
+              "n": 18,
+              "edge_jaccard": 0.9344031035090813,
+              "division_jaccard": 0.43478260869565216,
+              "division_tp": 10,
+              "division_fp": 4,
+              "division_fn": 9,
+              "node_recall": 0.9902781025382195,
+              "adj_edge_jaccard": 0.938942586635458,
+              "n_adj": 18,
+              "score": 0.9824208475050232
+            }
+          },
+          "report_sha256": "26fa4a59161a58d2aed54dde58fc5c24542a1e73d1d815138df8dbae7289af50"
+        },
+        "new_audit": {
+          "candidate": {
+            "n": 32,
+            "edge_jaccard": 0.9154304864225519,
+            "division_jaccard": 0.34782608695652173,
+            "division_tp": 8,
+            "division_fp": 2,
+            "division_fn": 13,
+            "node_recall": 0.9822215850761787,
+            "adj_edge_jaccard": 0.9194001443791365,
+            "n_adj": 32,
+            "score": 0.9541827530747887
+          },
+          "references": {
+            "B3": {
+              "n": 32,
+              "edge_jaccard": 0.9149229481561715,
+              "division_jaccard": 0.34782608695652173,
+              "division_tp": 8,
+              "division_fp": 2,
+              "division_fn": 13,
+              "node_recall": 0.9822215850761787,
+              "adj_edge_jaccard": 0.9188820718216159,
+              "n_adj": 32,
+              "score": 0.953664680517268
+            },
+            "B4": {
+              "n": 32,
+              "edge_jaccard": 0.9168267100014773,
+              "division_jaccard": 0.30434782608695654,
+              "division_tp": 7,
+              "division_fp": 2,
+              "division_fn": 14,
+              "node_recall": 0.9822215850761787,
+              "adj_edge_jaccard": 0.9207796329308383,
+              "n_adj": 32,
+              "score": 0.951214415539534
+            }
+          },
+          "report_sha256": "9c59aae68f5933a5d7fbc71eac18eaaa15fbd70876ef576ad4f1ba1e1efccde8"
+        },
+        "audit": {
+          "candidate": {
+            "n": 18,
+            "edge_jaccard": 0.9381338742393509,
+            "division_jaccard": 0.1,
+            "division_tp": 2,
+            "division_fp": 3,
+            "division_fn": 15,
+            "node_recall": 0.9866475511375609,
+            "adj_edge_jaccard": 0.9434871236008322,
+            "n_adj": 18,
+            "score": 0.9534871236008322
+          },
+          "references": {
+            "B3": {
+              "n": 18,
+              "edge_jaccard": 0.9370778928410626,
+              "division_jaccard": 0.1,
+              "division_tp": 2,
+              "division_fp": 3,
+              "division_fn": 15,
+              "node_recall": 0.9866475511375609,
+              "adj_edge_jaccard": 0.9424240201494792,
+              "n_adj": 18,
+              "score": 0.9524240201494792
+            },
+            "B4": {
+              "n": 18,
+              "edge_jaccard": 0.9374226223972988,
+              "division_jaccard": 0.1,
+              "division_tp": 2,
+              "division_fp": 3,
+              "division_fn": 15,
+              "node_recall": 0.9866475511375609,
+              "adj_edge_jaccard": 0.942768646218218,
+              "n_adj": 18,
+              "score": 0.952768646218218
+            }
+          },
+          "report_sha256": "5ea4378fa0960a92a6d0e9738df8670d930f824235e93f1b07b59e7cfa81d6f8"
+        }
+      }
+    }
+  },
+  "original_acceptance_report_unchanged": "visual_revised_release_acceptance_b56.json",
+  "original_acceptance_report_sha256": "23ca65c0ddd9ec7fd301f211430920655f63ea234cfa92cd0595f506e9dac738",
+  "frozen_selection_sha256": "06c3bd8105c9ffec5887f1192c92b6f92f1811b4305c28638540cae9aa8005e8",
+  "reason": "The user prioritizes the official competition aggregate score. Both candidates improve that score over B3 and B4 on every complete evaluation group, with unchanged node recall. The additional agent-defined edge-component guard fails; its result is retained as false, not rewritten. A higher division score outweighs a small decrease in edge score under the official metric. This is an explicit exploratory metric tradeoff, not a claim of non-regression on unseen data.",
+  "audit_reused": true,
+  "leaderboard_target_verified": false,
+  "unseen_score_nonregression_guaranteed": false,
+  "limitations": "This is a post-audit baseline revision: the initial B4-based candidates failed. Audit results informed the switch to B3 and then addition of the fixed visual link review, so the repeated 32-movie comparison is exploratory and is NOT independent validation. Original failed audit evidence is retained. Calibration is exploratory after candidate comparisons. New model fitting excludes these 32 audit movies, but inherited B3/B4 and public detector pretraining overlaps them. Fixed encoder features were precomputed without labels, scores or candidate-head inference to shorten the frozen audit. This is not fully out-of-fold validation of the entire pipeline. No leaderboard score is inferred from calibration."
+}
